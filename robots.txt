@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://konkatsu-navia.com/sitemap.xml
