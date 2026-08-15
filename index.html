@@ -1,2105 +1,802 @@
 <!DOCTYPE html>
-<html lang="ja">
+<!--
+  デザイン方針
+  業種: 婚活・結婚相談所アフィリエイト
+  参考にした業界慣習: 安心感のある余白、実績の可視化、無料相談までの明確な導線
+  差別化ポイント: 「おすすめランキング」ではなく、向き・不向きを先に示す意思決定ガイド
+  カラー選定理由: 深いティールで信頼、コーラルで人の温度、生成りで相談しやすさを表現
+  フォント選定理由: Noto Sans JPの可読性に、Shippori Minchoの落ち着いた品格を組み合わせた
+
+  TODO: afb PID 8173の提携承認後、html要素のdata-offer-urlを発行済み広告URLへ差し替える。
+  現在は公式サイトへのフォールバックURLを設定しているため、成果報酬は発生しない。
+-->
+<html lang="ja" data-offer-url="https://www.total-marriage.com/lp/gjcm01/">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO: タイトル（57文字） -->
-  <title>婚活アプリおすすめ比較ランキング【2026年最新】プロが厳選TOP6</title>
-
-  <!-- SEO: メタディスクリプション（116文字） -->
-  <meta name="description" content="婚活アプリをプロが徹底比較！料金・会員数・真剣度・年代別にランキングTOP6を厳選。30代・40代・再婚向け目的別選び方も解説。まずは無料登録で理想の出会いを見つけよう。">
-
-  <!-- インデックス制御: 大きい画像プレビュー・スニペット制限なしを明示 -->
+  <title>フィオーレの無料相談はどんな人向き？特徴・注意点を正直に解説｜婚活ナビ</title>
+  <meta name="description" content="結婚相談所フィオーレの無料相談を検討中の方へ。会員数、サポート、AI紹介、注意点、向いている人を公式情報に基づいて整理。予約前に確認したいポイントを3分で解説します。">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://konkatsu-navia.com/">
 
-  <!-- canonical -->
-  <link rel="canonical" href="https://konkatsu-navia.com/konkatsu-app-ranking/">
-
-  <!-- OGP -->
-  <meta property="og:title" content="婚活アプリおすすめ比較ランキング【2026年最新】プロが厳選TOP6">
-  <meta property="og:description" content="婚活アプリをプロが徹底比較！料金・会員数・真剣度・年代別にランキングTOP6を厳選。">
+  <meta property="og:title" content="フィオーレの無料相談はどんな人向き？｜婚活ナビ">
+  <meta property="og:description" content="アプリ婚活に疲れた方へ。フィオーレの特徴・向き不向き・相談前の確認点を根拠とともに整理しました。">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://konkatsu-navia.com/konkatsu-app-ranking/">
+  <meta property="og:url" content="https://konkatsu-navia.com/">
   <meta property="og:image" content="https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg">
   <meta property="og:image:width" content="1800">
   <meta property="og:image:height" content="919">
-  <meta property="og:image:alt" content="明るいカフェで自然に微笑み合う男女">
+  <meta property="og:image:alt" content="明るいカフェで会話する男女">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="婚活ナビ｜プロが選ぶマッチングアプリ比較">
-  <meta property="article:published_time" content="2026-08-04T00:00:00+09:00">
-  <meta property="article:modified_time" content="2026-08-08T00:00:00+09:00">
+  <meta property="og:site_name" content="婚活ナビ">
+  <meta property="article:published_time" content="2026-08-12T00:00:00+09:00">
+  <meta property="article:modified_time" content="2026-08-12T00:00:00+09:00">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="婚活アプリおすすめ比較ランキング【2026年最新】プロが厳選TOP6">
-  <meta name="twitter:description" content="婚活アプリをプロが徹底比較！料金・会員数・真剣度・年代別にランキングTOP6を厳選。">
+  <meta name="twitter:title" content="フィオーレの無料相談はどんな人向き？｜婚活ナビ">
+  <meta name="twitter:description" content="特徴だけでなく、注意点と向かない人まで正直に整理。">
   <meta name="twitter:image" content="https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg">
-  <meta name="theme-color" content="#A8324A">
+  <meta name="theme-color" content="#17383D">
 
-  <!-- 構造化データ: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "婚活アプリと従来の出会い系サイトの違いは何ですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "婚活アプリは「真剣な結婚・交際」を前提としたサービスです。公的身分証明書（運転免許証やパスポート）による厳格な年齢・本人確認が義務付けられており、24時間体制でサクラや不正ユーザーを監視・排除しています。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "女性は本当に完全無料で使えますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "はい。Pairs（ペアーズ）、Omiai、タップル、withなどは女性の基本機能（プロフィール閲覧・いいね・マッチング・メッセージ交換）が全て完全無料で利用できます。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "30代・40代でも婚活アプリで結婚できますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "はい、十分可能です。ペアーズやOmiai、youbrideは30代・40代の婚活利用者が多く、高い成婚率を記録しています。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "身バレが心配なのですが、知人にバレずに利用できますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ほとんどのアプリでFacebook連携や電話番号登録による「知人非表示機能」が備わっています。また、プロフィール写真の非公開設定や、プライベートモード機能を活用すれば周りにバレずに婚活が可能です。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "複数の婚活アプリを同時に使っても大丈夫ですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "むしろ2〜3個の無料登録を併用することが成功の近道です。出会えるお相手の数が2.8倍に増え、自分に一番合うアプリを見つけやすくなります。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "婚活アプリの料金相場はどれくらいですか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "女性は基本無料のアプリが大半で、男性は月額3,000円台後半〜4,300円程度が相場です。6ヶ月プランなど長期契約で1ヶ月あたりの単価を下げられるアプリも多く、まずは無料登録でどこまで試せるか確認するのがおすすめです。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "サクラや業者はいませんか？見分け方はありますか？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "本記事で紹介しているアプリはいずれも年齢確認・本人確認を法律に基づき義務化しており、サクラは存在しません。ただし勧誘目的の「業者」に注意が必要な点は共通です。極端に整った容姿の写真のみ・すぐ外部SNSやLINEへ誘導する・お金の話を持ちかける、といった相手には注意し、不審に感じたら運営に通報しましょう。"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- 構造化データ: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "ホーム",
-        "item": "https://konkatsu-navia.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "婚活アプリおすすめ比較ランキング",
-        "item": "https://konkatsu-navia.com/konkatsu-app-ranking/"
-      }
-    ]
-  }
-  </script>
-
-  <!-- 構造化データ: Organization / WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "婚活ナビ｜プロが選ぶマッチングアプリ比較",
-    "url": "https://konkatsu-navia.com/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "婚活ナビ",
-      "url": "https://konkatsu-navia.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg"
-      }
-    },
-    "inLanguage": "ja-JP"
-  }
-  </script>
-
-  <!-- 構造化データ: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "婚活アプリおすすめ比較ランキング【2026年最新】プロが厳選TOP6",
-    "description": "婚活アプリをプロが徹底比較！料金・会員数・真剣度・年代別にランキングTOP6を厳選。",
-    "image": "https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg",
-    "author": { "@type": "Organization", "name": "婚活ナビ編集部" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "婚活ナビ",
-      "logo": { "@type": "ImageObject", "url": "https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg" }
-    },
-    "datePublished": "2026-08-04T00:00:00+09:00",
-    "dateModified": "2026-08-08T00:00:00+09:00",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://konkatsu-navia.com/konkatsu-app-ranking/"
-    },
-    "inLanguage": "ja-JP"
-  }
-  </script>
-
-  <!-- 構造化データ: ItemList（ランキングTOP6） -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "婚活アプリおすすめランキング TOP6",
-    "itemListOrder": "https://schema.org/ItemListOrderDescending",
-    "numberOfItems": 6,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#pairs",
-        "item": {
-          "@type": "Product",
-          "name": "Pairs（ペアーズ）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#pairs",
-          "description": "国内最大級の会員数！圧倒的な出会いのチャンスと安心の利用環境",
-          "brand": { "@type": "Brand", "name": "Pairs" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1204", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "3700", "priceCurrency": "JPY", "url": "https://t.afi-b.com/visit.php?a=P8877e-g326269Z&p=w891789g", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#omiai",
-        "item": {
-          "@type": "Product",
-          "name": "Omiai（オミアイ）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#omiai",
-          "description": "「結婚を前提とした出会い」を求める30代以上の男女から圧倒的支持",
-          "brand": { "@type": "Brand", "name": "Omiai" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "876", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "3900", "priceCurrency": "JPY", "url": "https://t.afi-b.com/visit.php?a=N9796S-C326270b&p=w891789g", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#with",
-        "item": {
-          "@type": "Product",
-          "name": "with（ウィズ）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#with",
-          "description": "心理テストと性格診断で「内面がぴったり合う」お相手が見つかる",
-          "brand": { "@type": "Brand", "name": "with" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "743", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "3600", "priceCurrency": "JPY", "priceValidUntil": "2026-12-31", "url": "https://with.is/", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#tapple",
-        "item": {
-          "@type": "Product",
-          "name": "タップル（tapple）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#tapple",
-          "description": "行きたいデートプランや趣味からサクサクつながる",
-          "brand": { "@type": "Brand", "name": "タップル" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "612", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "3700", "priceCurrency": "JPY", "priceValidUntil": "2026-12-31", "url": "https://tapple.me/", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#marrish",
-        "item": {
-          "@type": "Product",
-          "name": "marrish（マリッシュ）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#marrish",
-          "description": "再婚・バツイチ理解者に特化した温かな婚活環境",
-          "brand": { "@type": "Brand", "name": "marrish" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "489", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "3400", "priceCurrency": "JPY", "priceValidUntil": "2026-12-31", "url": "https://marrish.com/", "availability": "https://schema.org/InStock" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#youbride",
-        "item": {
-          "@type": "Product",
-          "name": "youbride（ユーブライド）",
-          "url": "https://konkatsu-navia.com/konkatsu-app-ranking/#youbride",
-          "description": "過去5年で1万人以上の成婚者を輩出した成婚特化アプリ",
-          "brand": { "@type": "Brand", "name": "youbride" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "350", "bestRating": "5" },
-          "offers": { "@type": "Offer", "price": "4300", "priceCurrency": "JPY", "priceValidUntil": "2026-12-31", "url": "https://youbride.jp/", "availability": "https://schema.org/InStock" }
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- LCPヒーロー画像のプリロード（Core Web Vitals対策） -->
   <link rel="preload" as="image" href="assets/images/konkatsu-cafe-hero.jpg" fetchpriority="high">
-
-  <!-- Google Fonts: Noto Sans JP & Noto Serif JP for Media Elegance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Noto+Serif+JP:wght@600;700;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&amp;family=Shippori+Mincho:wght@600;700&amp;display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://konkatsu-navia.com/#website",
+        "url": "https://konkatsu-navia.com/",
+        "name": "婚活ナビ",
+        "inLanguage": "ja-JP"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://konkatsu-navia.com/#article",
+        "headline": "フィオーレの無料相談はどんな人向き？特徴・注意点を正直に解説",
+        "description": "結婚相談所フィオーレの特徴、向いている人、注意点を公式情報に基づいて整理したガイド。",
+        "image": "https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg",
+        "datePublished": "2026-08-12T00:00:00+09:00",
+        "dateModified": "2026-08-12T00:00:00+09:00",
+        "author": {"@type": "Organization", "name": "婚活ナビ編集部"},
+        "publisher": {"@type": "Organization", "name": "婚活ナビ"},
+        "mainEntityOfPage": "https://konkatsu-navia.com/",
+        "isPartOf": {"@id": "https://konkatsu-navia.com/#website"},
+        "inLanguage": "ja-JP"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "婚活ナビ", "item": "https://konkatsu-navia.com/"},
+          {"@type": "ListItem", "position": 2, "name": "フィオーレ無料相談ガイド", "item": "https://konkatsu-navia.com/#guide"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "無料相談を受けたら必ず入会しなければいけませんか？",
+            "acceptedAnswer": {"@type": "Answer", "text": "無料相談はサービス内容や担当者との相性を確認する場です。入会判断は料金・サポート範囲・活動条件の説明を確認したうえで持ち帰って検討しましょう。"}
+          },
+          {
+            "@type": "Question",
+            "name": "フィオーレはどんな人に向いていますか？",
+            "acceptedAnswer": {"@type": "Answer", "text": "結婚への意思が明確で、自己流の婚活を見直したい人や、担当者から客観的なフィードバックを受けたい人に向いています。"}
+          },
+          {
+            "@type": "Question",
+            "name": "相談前に何を決めておくとよいですか？",
+            "acceptedAnswer": {"@type": "Answer", "text": "希望する結婚時期、毎月の活動予算、サポートしてほしい範囲を大まかに整理しておくと比較しやすくなります。"}
+          },
+          {
+            "@type": "Question",
+            "name": "紹介される相手の身元確認はありますか？",
+            "acceptedAnswer": {"@type": "Answer", "text": "公式サイトでは、入会時に独身証明書や身分証明書、年収証明などの提出を求めていると案内されています。詳細は無料相談で確認してください。"}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
-    /* ===== CSS Reset & Design Tokens ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    
-    :root {
-      /* Main Brand Palette: Human, Warm, Elegant, High-Trust */
-      --color-rose:          #A8324A;
-      --color-rose-dark:     #842236;
-      --color-rose-light:    #F7EBEF;
-      --color-rose-pale:     #FAF4F6;
-      
-      --color-gold:          #B8883B;
-      --color-gold-dark:     #966A26;
-      --color-gold-light:    #F6EFE3;
-      
-      --color-sage:          #4B735D;
-      --color-sage-light:    #EEF4F0;
-      
-      --color-dark:          #1F1B1C;
-      --color-dark-muted:    #4A4446;
-      --color-gray-sub:      #6E676A;
-      --color-gray-border:   #E5DFE2;
-      --color-bg-light:      #FDFBF9;
-      --color-white:         #FFFFFF;
-      
-      --font-sans:  'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-serif: 'Noto Serif JP', Georgia, serif;
-      
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      
-      --shadow-sm: 0 2px 8px rgba(31, 27, 28, 0.05);
-      --shadow-md: 0 8px 24px rgba(31, 27, 28, 0.08);
-      --shadow-lg: 0 14px 36px rgba(168, 50, 74, 0.12);
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
-      font-family: var(--font-sans);
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--color-dark);
-      background-color: var(--color-bg-light);
+      min-width: 320px;
+      color: #173137;
+      background: #FBF8F2;
+      font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    :focus-visible { outline: 3px solid #E4A93A; outline-offset: 3px; }
+    ::selection { color: #fff; background: #D85F57; }
 
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    button { font-family: inherit; border: none; background: none; cursor: pointer; }
-
-    /* Focus States for Accessibility */
-    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
-      outline: 3px solid rgba(168, 50, 74, 0.4);
-      outline-offset: 2px;
+    :root {
+      --ink: #173137;
+      --ink-soft: #486267;
+      --teal: #17383D;
+      --teal-2: #25555A;
+      --coral: #D85F57;
+      --coral-dark: #B9433F;
+      --cream: #FBF8F2;
+      --paper: #FFFFFF;
+      --sand: #F0E7D8;
+      --mint: #DCEAE6;
+      --gold: #D9A43F;
+      --line: #DBE1DE;
+      --shadow: 0 18px 54px rgba(23, 49, 55, .12);
+      --shadow-soft: 0 8px 28px rgba(23, 49, 55, .08);
+      --radius-lg: 32px;
+      --radius-md: 20px;
+      --radius-sm: 12px;
+      --container: 1160px;
     }
 
-    /* Layout Containers */
-    .container { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 64px 0; }
-    .section-alt { background-color: var(--color-white); border-top: 1px solid var(--color-gray-border); border-bottom: 1px solid var(--color-gray-border); }
-
-    /* SVG Icon Utility */
-    .icon-svg {
-      width: 1.15em; height: 1.15em;
-      fill: none; stroke: currentColor;
-      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-      display: inline-block; vertical-align: -0.15em;
-      flex-shrink: 0;
+    .container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+    .skip-link { position: fixed; left: 16px; top: -80px; z-index: 1000; padding: 10px 16px; color: #fff; background: var(--teal); border-radius: 8px; }
+    .skip-link:focus { top: 12px; }
+    .ad-disclosure {
+      padding: 8px 20px;
+      color: #F9F1E5;
+      background: var(--teal);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      letter-spacing: .04em;
     }
-    .icon-svg.lg { width: 1.5em; height: 1.5em; }
-    .icon-svg.xl { width: 2.2em; height: 2.2em; }
 
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--color-gray-border);
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: var(--shadow-sm);
+      background: rgba(251, 248, 242, .92);
+      border-bottom: 1px solid rgba(23, 49, 55, .1);
+      backdrop-filter: blur(14px);
     }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-    }
-    .site-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--color-dark);
-      letter-spacing: -0.02em;
-    }
-    .logo-badge {
-      width: 32px; height: 32px;
-      background: var(--color-rose);
-      color: var(--color-white);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      box-shadow: 0 2px 6px rgba(168, 50, 74, 0.3);
-    }
-    .site-logo span { color: var(--color-rose); }
-    
-    .header-nav { display: flex; align-items: center; gap: 16px; }
-    .header-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--color-rose);
-      color: var(--color-white);
-      padding: 9px 18px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(168, 50, 74, 0.25);
-    }
-    .header-cta:hover {
-      background: var(--color-rose-dark);
-      transform: translateY(-1px);
+    .header-inner { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-weight: 800; }
+    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; color: #fff; background: var(--coral); border-radius: 50% 50% 50% 12px; transform: rotate(-8deg); }
+    .brand-mark svg { width: 21px; height: 21px; transform: rotate(8deg); }
+    .brand-name { font-family: "Shippori Mincho", serif; font-size: 21px; letter-spacing: .08em; }
+    .brand-note { display: block; margin-top: -3px; color: var(--ink-soft); font-family: "Noto Sans JP", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav a { color: var(--ink-soft); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .nav a:hover { color: var(--coral-dark); }
+    .nav .nav-cta { padding: 11px 17px; color: #fff; background: var(--coral); border-radius: 999px; box-shadow: 0 6px 18px rgba(216, 95, 87, .25); }
+    .nav .nav-cta:hover { color: #fff; background: var(--coral-dark); }
+    .menu-button { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 50%; }
+    .menu-button svg { width: 22px; height: 22px; }
+
+    .hero { position: relative; overflow: hidden; padding: 70px 0 90px; }
+    .hero::before { content: ""; position: absolute; width: 560px; height: 560px; right: -180px; top: -210px; background: rgba(220, 234, 230, .75); border-radius: 50%; filter: blur(2px); }
+    .hero::after { content: ""; position: absolute; width: 280px; height: 280px; left: -140px; bottom: -80px; background: rgba(216, 95, 87, .08); border-radius: 50%; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 68px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; color: var(--teal-2); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--coral); }
+    h1, h2, h3 { text-wrap: balance; }
+    h1 { max-width: 670px; font-family: "Shippori Mincho", serif; font-size: clamp(39px, 5vw, 68px); line-height: 1.35; letter-spacing: .02em; }
+    .hero-em { position: relative; color: var(--coral-dark); white-space: nowrap; }
+    .hero-em::after { content: ""; position: absolute; left: 0; right: 0; bottom: 3px; height: 8px; z-index: -1; background: rgba(217, 164, 63, .32); border-radius: 99px; }
+    .hero-lead { max-width: 610px; margin-top: 25px; color: var(--ink-soft); font-size: 17px; line-height: 1.9; }
+    .hero-lead strong { color: var(--ink); }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 25px; }
+    .trust-chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; color: var(--teal-2); background: #fff; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 16px rgba(23, 49, 55, .05); }
+    .trust-chip svg { width: 15px; height: 15px; color: var(--coral); }
+    .cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+    .button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 800; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button-primary { color: #fff; background: var(--coral); box-shadow: 0 12px 28px rgba(216, 95, 87, .27); }
+    .button-primary:hover { transform: translateY(-2px); background: var(--coral-dark); box-shadow: 0 16px 32px rgba(185, 67, 63, .32); }
+    .button-secondary { color: var(--ink); background: #fff; border: 1px solid var(--line); }
+    .button-secondary:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+    .button-primary svg, .button-secondary svg { width: 19px; height: 19px; }
+    .microcopy { width: 100%; color: #66797D; font-size: 11px; }
+    .microcopy strong { color: var(--ink); }
+
+    .hero-media { position: relative; min-height: 590px; }
+    .photo-frame { position: absolute; inset: 0 0 40px 25px; overflow: hidden; background: #E9E3DA; border-radius: 46% 46% 25px 25px; box-shadow: var(--shadow); }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 58% center; }
+    .photo-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 58%, rgba(14, 35, 40, .35)); }
+    .stat-card { position: absolute; left: -10px; bottom: 0; width: 230px; padding: 20px; color: var(--ink); background: rgba(255, 255, 255, .96); border: 1px solid rgba(255, 255, 255, .75); border-radius: var(--radius-md); box-shadow: var(--shadow); }
+    .stat-label { display: block; color: var(--ink-soft); font-size: 11px; font-weight: 700; }
+    .stat-number { display: block; margin-top: 2px; color: var(--coral-dark); font-family: "Shippori Mincho", serif; font-size: 34px; font-weight: 700; line-height: 1.25; }
+    .stat-note { display: block; margin-top: 4px; color: #748488; font-size: 9px; line-height: 1.5; }
+    .media-badge { position: absolute; right: -8px; top: 54px; width: 116px; height: 116px; display: grid; place-items: center; color: #fff; background: var(--teal); border: 6px solid var(--cream); border-radius: 50%; text-align: center; transform: rotate(7deg); box-shadow: var(--shadow-soft); }
+    .media-badge strong { display: block; font-family: "Shippori Mincho", serif; font-size: 26px; line-height: 1.1; }
+    .media-badge span { font-size: 10px; font-weight: 700; line-height: 1.4; }
+
+    .quick-nav { position: relative; z-index: 2; margin-top: -30px; }
+    .quick-nav-inner { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .quick-nav a { position: relative; display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 70px; padding: 14px; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; }
+    .quick-nav a + a { border-left: 1px solid var(--line); }
+    .quick-nav a:hover { color: var(--coral-dark); background: #FFF9F4; }
+    .quick-nav-num { color: var(--coral); font-family: "Shippori Mincho", serif; font-size: 18px; }
+
+    .section { padding: 110px 0; }
+    .section-tight { padding: 78px 0; }
+    .section-mint { background: var(--mint); }
+    .section-dark { color: #fff; background: var(--teal); }
+    .section-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: var(--coral-dark); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .section-kicker::before { content: ""; width: 30px; height: 2px; background: currentColor; }
+    .section-dark .section-kicker { color: #F4B7B2; }
+    .section-heading { max-width: 760px; font-family: "Shippori Mincho", serif; font-size: clamp(30px, 4vw, 50px); line-height: 1.45; letter-spacing: .02em; }
+    .section-intro { max-width: 720px; margin-top: 18px; color: var(--ink-soft); font-size: 15px; }
+    .section-dark .section-intro { color: #C7D8D5; }
+    .accent { color: var(--coral-dark); }
+
+    .verdict-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; margin-top: 42px; }
+    .verdict-main { position: relative; padding: 38px; overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+    .verdict-main::before { content: "結論"; position: absolute; right: -4px; top: -18px; color: rgba(216, 95, 87, .08); font-family: "Shippori Mincho", serif; font-size: 110px; font-weight: 700; line-height: 1; }
+    .verdict-tag { display: inline-block; padding: 6px 10px; color: var(--coral-dark); background: #FCEBE8; border-radius: 999px; font-size: 11px; font-weight: 800; }
+    .verdict-title { position: relative; margin-top: 16px; font-family: "Shippori Mincho", serif; font-size: 27px; line-height: 1.6; }
+    .verdict-text { position: relative; margin-top: 14px; color: var(--ink-soft); }
+    .fit-list { display: grid; gap: 14px; }
+    .fit-card { padding: 22px 24px; background: rgba(255, 255, 255, .72); border: 1px solid rgba(23, 49, 55, .1); border-radius: var(--radius-md); }
+    .fit-card-head { display: flex; align-items: center; gap: 10px; font-weight: 800; }
+    .fit-card-head svg { width: 20px; height: 20px; color: var(--coral); }
+    .fit-card p { margin-top: 6px; color: var(--ink-soft); font-size: 13px; line-height: 1.7; }
+
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+    .proof-card { min-height: 240px; padding: 28px 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 7px 20px rgba(23, 49, 55, .06); }
+    .proof-icon { width: 47px; height: 47px; display: grid; place-items: center; color: var(--coral-dark); background: #FCEBE8; border-radius: 15px; }
+    .proof-icon svg { width: 24px; height: 24px; }
+    .proof-card h3 { margin-top: 20px; font-size: 18px; line-height: 1.5; }
+    .proof-card p { margin-top: 10px; color: var(--ink-soft); font-size: 13px; line-height: 1.75; }
+    .proof-card sup { font-size: 9px; }
+
+    .needs-panel { margin-top: 44px; display: grid; grid-template-columns: .92fr 1.08fr; overflow: hidden; background: var(--paper); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .needs-quote { position: relative; padding: 42px; color: #fff; background: var(--teal); }
+    .needs-quote::before { content: "“"; position: absolute; right: 25px; top: 6px; color: rgba(255,255,255,.09); font-family: Georgia, serif; font-size: 180px; line-height: 1; }
+    .needs-quote strong { position: relative; display: block; font-family: "Shippori Mincho", serif; font-size: 27px; line-height: 1.65; }
+    .needs-quote p { position: relative; margin-top: 16px; color: #BED0CD; font-size: 12px; }
+    .needs-data { padding: 38px 42px; }
+    .bar-item + .bar-item { margin-top: 24px; }
+    .bar-label { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 8px; font-size: 13px; font-weight: 700; }
+    .bar-label strong { color: var(--coral-dark); }
+    .bar-track { height: 9px; overflow: hidden; background: #E9ECEA; border-radius: 99px; }
+    .bar-fill { height: 100%; width: var(--value); background: linear-gradient(90deg, var(--coral), var(--gold)); border-radius: inherit; }
+    .data-note { margin-top: 18px; color: #6E7F82; font-size: 10px; line-height: 1.6; }
+
+    .compare-wrap { margin-top: 42px; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .compare-table { width: 100%; min-width: 760px; border-collapse: collapse; background: #fff; }
+    .compare-table th, .compare-table td { padding: 20px 22px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+    .compare-table thead th { color: #fff; background: var(--teal); font-size: 14px; }
+    .compare-table thead th:first-child { width: 24%; }
+    .compare-table tbody th { background: #F5F2EC; font-size: 13px; }
+    .compare-table tbody td { color: var(--ink-soft); font-size: 13px; }
+    .compare-table tbody td:last-child { color: var(--ink); background: #FFF7F4; font-weight: 700; }
+    .compare-table tr:last-child th, .compare-table tr:last-child td { border-bottom: 0; }
+
+    .caution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 42px; }
+    .caution-card { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .caution-card.good { border-top: 5px solid var(--teal-2); }
+    .caution-card.check { border-top: 5px solid var(--gold); }
+    .caution-card h3 { display: flex; align-items: center; gap: 10px; font-size: 20px; }
+    .caution-card h3 svg { width: 23px; height: 23px; }
+    .caution-list { list-style: none; display: grid; gap: 14px; margin-top: 22px; padding: 0; }
+    .caution-list li { position: relative; padding-left: 28px; color: var(--ink-soft); font-size: 14px; }
+    .caution-list li::before { content: ""; position: absolute; left: 0; top: .58em; width: 13px; height: 13px; background: var(--mint); border: 2px solid var(--teal-2); border-radius: 50%; }
+    .check .caution-list li::before { background: #FFF4D9; border-color: var(--gold); }
+
+    .journey { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .journey::before { content: ""; position: absolute; left: 15%; right: 15%; top: 38px; height: 1px; background: rgba(255,255,255,.22); }
+    .step { position: relative; text-align: center; }
+    .step-num { position: relative; z-index: 1; width: 76px; height: 76px; display: grid; place-items: center; margin: 0 auto; color: var(--teal); background: #F7D9D5; border: 7px solid var(--teal); border-radius: 50%; font-family: "Shippori Mincho", serif; font-size: 22px; font-weight: 700; box-shadow: 0 0 0 1px rgba(255,255,255,.28); }
+    .step h3 { margin-top: 20px; font-size: 18px; }
+    .step p { max-width: 300px; margin: 9px auto 0; color: #BDD0CD; font-size: 13px; }
+
+    .cta-panel { position: relative; overflow: hidden; padding: 58px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .cta-panel::after { content: ""; position: absolute; width: 340px; height: 340px; right: -130px; bottom: -190px; background: var(--mint); border-radius: 50%; }
+    .cta-panel-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 50px; }
+    .cta-panel h2 { font-family: "Shippori Mincho", serif; font-size: clamp(28px, 4vw, 45px); line-height: 1.5; }
+    .cta-panel p { max-width: 650px; margin-top: 13px; color: var(--ink-soft); }
+    .cta-panel-action { min-width: 310px; text-align: center; }
+    .cta-panel-action .button-primary { width: 100%; }
+    .cta-panel-action small { display: block; margin-top: 10px; color: #6F7F82; font-size: 10px; }
+
+    .faq-list { max-width: 900px; display: grid; gap: 12px; margin: 42px auto 0; }
+    .faq-item { overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+    .faq-item summary { position: relative; list-style: none; padding: 23px 58px 23px 24px; cursor: pointer; font-weight: 800; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before { content: "Q"; display: inline-grid; width: 28px; height: 28px; place-items: center; margin-right: 12px; color: #fff; background: var(--teal); border-radius: 50%; font-family: "Shippori Mincho", serif; }
+    .faq-item summary::after { content: "+"; position: absolute; right: 24px; top: 20px; color: var(--coral-dark); font-size: 28px; font-weight: 400; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-answer { padding: 0 24px 23px 64px; color: var(--ink-soft); font-size: 14px; }
+
+    .sources { padding: 28px; background: rgba(255,255,255,.68); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .sources h2 { font-size: 16px; }
+    .sources ol { margin-top: 14px; padding-left: 22px; }
+    .sources li { color: var(--ink-soft); font-size: 11px; line-height: 1.7; }
+    .sources li + li { margin-top: 7px; }
+    .sources a { text-underline-offset: 3px; }
+
+    .site-footer { padding: 52px 0 105px; color: #BCD0CD; background: #102A2F; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; }
+    .footer-brand { color: #fff; font-family: "Shippori Mincho", serif; font-size: 24px; font-weight: 700; }
+    .footer-copy { margin-top: 12px; font-size: 12px; line-height: 1.8; }
+    .footer-disclosure { padding: 18px; color: #D9E5E3; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; font-size: 11px; line-height: 1.8; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 34px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: 10px; }
+    .footer-bottom a { text-underline-offset: 3px; }
+
+    .sticky-cta { position: fixed; left: 50%; bottom: 16px; z-index: 90; width: min(660px, calc(100% - 28px)); display: flex; align-items: center; gap: 18px; padding: 10px 12px 10px 20px; color: #fff; background: rgba(16, 42, 47, .96); border: 1px solid rgba(255,255,255,.15); border-radius: 18px; box-shadow: 0 14px 45px rgba(16, 42, 47, .35); backdrop-filter: blur(12px); transform: translate(-50%, 140%); transition: transform .35s ease; }
+    .sticky-cta.is-visible { transform: translate(-50%, 0); }
+    .sticky-copy { flex: 1; }
+    .sticky-copy strong { display: block; font-size: 13px; }
+    .sticky-copy span { display: block; color: #BFD0CD; font-size: 10px; }
+    .sticky-button { display: inline-flex; align-items: center; gap: 7px; padding: 11px 16px; color: #fff; background: var(--coral); border-radius: 11px; font-size: 12px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .sticky-close { width: 26px; height: 26px; color: #BFD0CD; background: transparent; border: 0; cursor: pointer; }
+    .sticky-close svg { width: 16px; height: 16px; }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-shown { opacity: 1; transform: none; }
+    .progress { position: fixed; left: 0; top: 0; z-index: 200; width: 0; height: 3px; background: var(--coral); }
+
+    @media (max-width: 980px) {
+      .nav { position: absolute; left: 20px; right: 20px; top: 76px; display: none; align-items: stretch; gap: 0; padding: 12px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+      .nav.is-open { display: grid; }
+      .nav a { padding: 12px 14px; }
+      .nav .nav-cta { margin-top: 6px; text-align: center; }
+      .menu-button { display: inline-flex; }
+      .hero-grid { grid-template-columns: 1fr; gap: 45px; }
+      .hero-copy { max-width: 760px; }
+      .hero-media { min-height: 520px; max-width: 650px; width: 100%; margin: 0 auto; }
+      .proof-grid { grid-template-columns: 1fr 1fr; }
+      .cta-panel-grid { grid-template-columns: 1fr; gap: 30px; }
+      .cta-panel-action { min-width: 0; max-width: 380px; }
     }
 
-    /* ===== BREADCRUMB ===== */
-    .breadcrumb {
-      background: #F5F0F2;
-      padding: 10px 0;
-      font-size: 12px;
-      color: var(--color-gray-sub);
-      border-bottom: 1px solid #ECE5E8;
-    }
-    .breadcrumb ol { display: flex; gap: 6px; list-style: none; flex-wrap: wrap; }
-    .breadcrumb li::after { content: '›'; margin-left: 6px; color: #B5ADB1; }
-    .breadcrumb li:last-child::after { display: none; }
-    .breadcrumb a { color: var(--color-dark-muted); }
-    .breadcrumb a:hover { color: var(--color-rose); text-decoration: underline; }
-
-    /* ===== TABLE OF CONTENTS NAV ===== */
-    .toc-nav {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--color-gray-border);
-      position: sticky;
-      top: 57px;
-      z-index: 90;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-    }
-    .toc-nav-inner {
-      max-width: 1040px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 20px;
-      white-space: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    @media (max-width: 768px) {
-      .toc-nav-inner {
-        justify-content: flex-start;
-      }
-    }
-    .toc-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: var(--color-rose-pale);
-      color: var(--color-rose-dark);
-      font-size: 12.5px;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 50px;
-      border: 1px solid transparent;
-      transition: all 0.2s ease;
-      flex-shrink: 0;
-    }
-    .toc-link:hover { background: var(--color-rose); color: var(--color-white); }
-
-    /* ===== PR DISCLOSURE BAR ===== */
-    .pr-disclosure {
-      background: var(--color-dark);
-      color: rgba(255,255,255,0.82);
-      font-size: 11.5px;
-      text-align: center;
-      padding: 6px 0;
-      letter-spacing: 0.02em;
+    @media (max-width: 720px) {
+      html { scroll-padding-top: 78px; }
+      body { font-size: 15px; }
+      .container { width: min(100% - 28px, var(--container)); }
+      .ad-disclosure { padding-inline: 14px; font-size: 10px; }
+      .header-inner { height: 62px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .brand-name { font-size: 18px; }
+      .hero { padding: 48px 0 76px; }
+      h1 { font-size: clamp(34px, 11vw, 48px); }
+      .hero-lead { font-size: 15px; }
+      .cta-row { display: grid; grid-template-columns: 1fr; }
+      .button-primary, .button-secondary { width: 100%; min-height: 56px; }
+      .trust-row { gap: 7px; }
+      .trust-chip { font-size: 11px; }
+      .hero-media { min-height: 430px; }
+      .photo-frame { inset: 0 0 34px 0; border-radius: 42% 42% 20px 20px; }
+      .stat-card { left: 8px; width: 205px; padding: 16px; }
+      .stat-number { font-size: 29px; }
+      .media-badge { right: -4px; top: 30px; width: 94px; height: 94px; border-width: 5px; }
+      .media-badge strong { font-size: 22px; }
+      .quick-nav { margin-top: -22px; }
+      .quick-nav-inner { grid-template-columns: 1fr 1fr; }
+      .quick-nav a { min-height: 58px; font-size: 11px; }
+      .quick-nav a:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .quick-nav a:nth-child(4) { border-top: 1px solid var(--line); }
+      .section { padding: 78px 0; }
+      .section-tight { padding: 58px 0; }
+      .section-heading { font-size: clamp(28px, 8.5vw, 38px); }
+      .verdict-grid, .needs-panel, .caution-grid { grid-template-columns: 1fr; }
+      .verdict-main, .needs-quote, .needs-data { padding: 28px 24px; }
+      .verdict-main::before { font-size: 80px; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .proof-card { min-height: 0; }
+      .needs-panel { overflow: visible; }
+      .needs-quote { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+      .journey { grid-template-columns: 1fr; gap: 34px; }
+      .journey::before { left: 37px; right: auto; top: 38px; bottom: 38px; width: 1px; height: auto; }
+      .step { display: grid; grid-template-columns: 76px 1fr; column-gap: 18px; text-align: left; }
+      .step-num { grid-row: span 2; }
+      .step h3 { margin-top: 8px; }
+      .step p { margin: 4px 0 0; }
+      .cta-panel { padding: 34px 24px; }
+      .faq-item summary { padding: 20px 50px 20px 18px; font-size: 14px; }
+      .faq-item summary::before { display: none; }
+      .faq-answer { padding: 0 18px 20px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+      .sticky-cta { gap: 10px; padding: 9px 9px 9px 14px; }
+      .sticky-copy span { display: none; }
+      .sticky-button { padding: 10px 12px; font-size: 11px; }
     }
 
-    /* ===== HERO SECTION ===== */
-    .hero {
-      background: linear-gradient(135deg, #FAF4F6 0%, #FBF8F4 50%, #F5EFE9 100%);
-      padding: 48px 0 56px;
-      border-bottom: 1px solid var(--color-gray-border);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 36px;
-      align-items: center;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--color-white);
-      border: 1px solid var(--color-gold);
-      color: var(--color-gold-dark);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 16px;
-      box-shadow: var(--shadow-sm);
-    }
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(26px, 3.8vw, 40px);
-      font-weight: 900;
-      line-height: 1.35;
-      color: var(--color-dark);
-      margin-bottom: 16px;
-      letter-spacing: -0.02em;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--color-rose);
-      border-bottom: 3px solid rgba(168, 50, 74, 0.2);
-    }
-    .hero-lead {
-      font-size: 15px;
-      color: var(--color-dark-muted);
-      margin-bottom: 24px;
-      line-height: 1.8;
-    }
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--color-white);
-      border: 1px solid var(--color-gray-border);
-      color: var(--color-dark-muted);
-      font-size: 13px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 8px;
-      box-shadow: var(--shadow-sm);
-    }
-    .hero-cta-group { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-
-    /* Button Primary Component (Shimmer + Pulse CVR Animation) */
-    .btn-primary-lg {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: linear-gradient(135deg, var(--color-rose) 0%, #C03B56 100%);
-      color: var(--color-white);
-      font-size: 16px;
-      font-weight: 700;
-      padding: 15px 32px;
-      border-radius: 50px;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-primary-lg::after {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%; width: 200%; height: 200%;
-      background: linear-gradient(60deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
-      transform: rotate(30deg);
-      animation: shimmer 4s infinite;
-    }
-    @keyframes shimmer {
-      0% { transform: translateX(-100%) rotate(30deg); }
-      20% { transform: translateX(100%) rotate(30deg); }
-      100% { transform: translateX(100%) rotate(30deg); }
-    }
-    .btn-primary-lg:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(168, 50, 74, 0.35);
-      background: linear-gradient(135deg, var(--color-rose-dark) 0%, var(--color-rose) 100%);
-    }
-
-    .btn-secondary-lg {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--color-white);
-      color: var(--color-dark);
-      border: 1.5px solid var(--color-gray-border);
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px 24px;
-      border-radius: 50px;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-sm);
-    }
-    .btn-secondary-lg:hover {
-      border-color: var(--color-rose);
-      color: var(--color-rose);
-      background: var(--color-rose-pale);
-    }
-
-    .hero-visual {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      border: 4px solid var(--color-white);
-    }
-    .hero-visual img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-    }
-    .hero-visual-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(31,27,28,0.85) 0%, transparent 100%);
-      padding: 20px;
-      color: var(--color-white);
-    }
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(4px);
-      border-radius: var(--radius-sm);
-      padding: 10px;
-      color: var(--color-dark);
-    }
-    .stat-val { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--color-rose); }
-    .stat-lbl { font-size: 10px; color: var(--color-gray-sub); font-weight: 500; }
-
-    /* ===== INTERACTIVE 30-SEC DIAGNOSIS MODULE (CVR CATCH) ===== */
-    .diagnosis-card {
-      background: var(--color-white);
-      border: 2px solid var(--color-rose);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      box-shadow: var(--shadow-lg);
-      margin-top: 32px;
-      margin-bottom: 48px;
-      position: relative;
-      z-index: 10;
-    }
-    .diagnosis-header { text-align: center; margin-bottom: 24px; }
-    .diagnosis-title {
-      font-family: var(--font-serif);
-      font-size: clamp(18px, 3vw, 22px);
-      font-weight: 700;
-      color: var(--color-dark);
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .diagnosis-sub { font-size: 13px; color: var(--color-gray-sub); margin-top: 4px; }
-    
-    .diagnosis-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
-    @media (max-width: 640px) { .diagnosis-steps { grid-template-columns: 1fr; gap: 14px; } }
-    
-    .diag-group-label { font-size: 13px; font-weight: 700; color: var(--color-dark-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-    .diag-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .diag-btn {
-      background: var(--color-bg-light);
-      border: 1.5px solid var(--color-gray-border);
-      border-radius: var(--radius-sm);
-      padding: 10px 12px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-dark-muted);
-      text-align: center;
-      transition: all 0.2s ease;
-    }
-    .diag-btn:hover, .diag-btn.active {
-      background: var(--color-rose-pale);
-      border-color: var(--color-rose);
-      color: var(--color-rose);
-    }
-
-    .diagnosis-result-box {
-      display: none;
-      background: var(--color-sage-light);
-      border: 1.5px solid var(--color-sage);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      text-align: center;
-      animation: fadeIn 0.4s ease;
-    }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-    .result-app-name { font-size: 18px; font-weight: 900; color: var(--color-dark); margin: 6px 0; }
-    .result-reason { font-size: 13px; color: var(--color-dark-muted); margin-bottom: 14px; }
-
-    /* ===== SECTION HEADINGS ===== */
-    .section-heading { text-align: center; margin-bottom: 44px; }
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(22px, 3.5vw, 28px);
-      font-weight: 700;
-      color: var(--color-dark);
-      letter-spacing: -0.02em;
-    }
-    .section-title-line {
-      width: 40px; height: 3px;
-      background: var(--color-rose);
-      margin: 12px auto 0;
-      border-radius: 2px;
-    }
-    .section-desc { font-size: 14px; color: var(--color-gray-sub); margin-top: 10px; }
-
-    /* ===== BEGINNER GUIDE GRID ===== */
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    @media (max-width: 840px) { .guide-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 480px) { .guide-grid { grid-template-columns: 1fr; } }
-    
-    .guide-card {
-      background: var(--color-white);
-      border: 1px solid var(--color-gray-border);
-      border-radius: var(--radius-md);
-      padding: 24px 20px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.2s ease;
-    }
-    .guide-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .guide-icon {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: var(--color-rose-light);
-      color: var(--color-rose);
-      display: grid; place-items: center;
-      margin-bottom: 16px;
-    }
-    .guide-card h3 { font-size: 15px; font-weight: 700; color: var(--color-dark); margin-bottom: 8px; }
-    .guide-card p { font-size: 13px; color: var(--color-dark-muted); line-height: 1.65; }
-
-    /* ===== INTERACTIVE FILTER TABS (CVR HIGH-INTENTION) ===== */
-    .filter-wrap {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-    .filter-tab {
-      background: var(--color-white);
-      border: 1.5px solid var(--color-gray-border);
-      border-radius: 50px;
-      padding: 9px 20px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--color-dark-muted);
-      transition: all 0.2s ease;
-    }
-    .filter-tab:hover, .filter-tab.active {
-      background: var(--color-rose);
-      border-color: var(--color-rose);
-      color: var(--color-white);
-      box-shadow: 0 4px 14px rgba(168, 50, 74, 0.25);
-    }
-
-    /* ===== RANKING CARDS ===== */
-    .ranking-list { display: flex; flex-direction: column; gap: 32px; }
-
-    .app-card {
-      background: var(--color-white);
-      border: 1.5px solid var(--color-gray-border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-      transition: all 0.25s ease;
-      position: relative;
-    }
-    .app-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-
-    /* Rank 1 Highlight Styling */
-    .app-card.rank-top1 {
-      border: 2px solid var(--color-gold);
-    }
-    .top1-crown-banner {
-      background: linear-gradient(90deg, var(--color-gold) 0%, #D4AF37 100%);
-      color: var(--color-white);
-      font-size: 12px;
-      font-weight: 900;
-      text-align: center;
-      padding: 6px;
-      letter-spacing: 0.08em;
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-    }
-
-    .card-header-inner {
-      padding: 24px 28px 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      background: linear-gradient(to bottom, #FAF6F8 0%, var(--color-white) 100%);
-      border-bottom: 1px solid #F2ECF0;
-    }
-    @media (max-width: 600px) {
-      .card-header-inner { padding: 18px 16px; flex-direction: column; gap: 12px; }
-    }
-
-    .rank-number-badge {
-      width: 48px; height: 48px;
-      border-radius: 12px;
-      background: var(--color-dark);
-      color: var(--color-white);
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: 900;
-      display: grid; place-items: center;
-      flex-shrink: 0;
-      box-shadow: var(--shadow-sm);
-    }
-    .rank-number-badge.gold { background: linear-gradient(135deg, var(--color-gold) 0%, #8A611D 100%); }
-    .rank-number-badge.silver { background: linear-gradient(135deg, #8A929A 0%, #5E666E 100%); }
-    .rank-number-badge.bronze { background: linear-gradient(135deg, #A8715A 0%, #7D4C38 100%); }
-
-    .app-logo-badge {
-      width: 68px; height: 68px;
-      border-radius: 16px;
-      color: var(--color-white);
-      font-family: var(--font-serif);
-      font-size: 26px; font-weight: 900;
-      display: grid; place-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      flex-shrink: 0;
-    }
-
-    .app-main-info { flex: 1; }
-    .app-name-wrap { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .app-name { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: var(--color-dark); }
-    
-    .badge-recommend {
-      background: var(--color-rose-light);
-      color: var(--color-rose-dark);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 50px;
-      border: 1px solid rgba(168, 50, 74, 0.2);
-    }
-    .badge-recommend.gold { background: var(--color-gold-light); color: var(--color-gold-dark); border-color: rgba(184, 136, 59, 0.3); }
-
-    .app-catchcopy { font-size: 13px; color: var(--color-dark-muted); margin-top: 4px; }
-    
-    .app-rating-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
-    .rating-stars { color: #E5A118; font-size: 16px; letter-spacing: 1px; }
-    .rating-score { font-weight: 700; font-size: 16px; color: var(--color-dark); }
-    .rating-count { font-size: 12px; color: var(--color-gray-sub); }
-
-    .card-body-inner { padding: 24px 28px; }
-    @media (max-width: 600px) { .card-body-inner { padding: 18px 16px; } }
-
-    .spec-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    @media (max-width: 480px) { .spec-grid { grid-template-columns: 1fr; } }
-    .spec-box {
-      background: var(--color-bg-light);
-      border: 1px solid var(--color-gray-border);
-      border-radius: var(--radius-sm);
-      padding: 10px 12px;
-      text-align: center;
-    }
-    .spec-label { font-size: 11px; color: var(--color-gray-sub); margin-bottom: 2px; }
-    .spec-val { font-size: 14px; font-weight: 700; color: var(--color-dark); }
-    .spec-val em { font-style: normal; color: var(--color-rose); font-size: 16px; }
-
-    .points-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .points-list li {
-      font-size: 14px;
-      color: var(--color-dark-muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .points-list li::before {
-      content: '✓';
-      color: var(--color-rose);
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-
-    /* Human Editorial Comment Box */
-    .editor-comment {
-      background: #F8F5F2;
-      border-left: 3px solid var(--color-gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 12px 16px;
-      font-size: 13px;
-      color: var(--color-dark-muted);
-      margin-bottom: 20px;
-    }
-    .editor-comment-title { font-weight: 700; color: var(--color-gold-dark); margin-bottom: 2px; display: flex; align-items: center; gap: 6px; }
-
-    /* High CVR CTA Button inside App Cards */
-    .app-cta-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: linear-gradient(135deg, var(--color-rose) 0%, #C03B56 100%);
-      color: var(--color-white);
-      font-size: 16px;
-      font-weight: 700;
-      padding: 16px 20px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(168, 50, 74, 0.28);
-      transition: all 0.2s ease;
-      letter-spacing: 0.02em;
-    }
-    .app-cta-btn:hover {
-      background: linear-gradient(135deg, var(--color-rose-dark) 0%, var(--color-rose) 100%);
-      box-shadow: 0 10px 28px rgba(168, 50, 74, 0.38);
-      transform: translateY(-1px);
-    }
-    .app-cta-sub {
-      font-size: 11px;
-      color: var(--color-gray-sub);
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    /* ===== RESPONSIVE COMPARISON TABLE ===== */
-    .table-scroll-container {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border: 1.5px solid var(--color-gray-border);
-      border-radius: var(--radius-md);
-      background: var(--color-white);
-      box-shadow: var(--shadow-sm);
-    }
-    .comparison-table {
-      width: 100%;
-      min-width: 680px;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-    .comparison-table th {
-      background: #2D282A;
-      color: var(--color-white);
-      padding: 14px 12px;
-      text-align: center;
-      font-weight: 700;
-    }
-    .comparison-table td {
-      padding: 14px 12px;
-      border-bottom: 1px solid var(--color-gray-border);
-      text-align: center;
-      vertical-align: middle;
-    }
-    .comparison-table tr:nth-child(even) td { background: #FAF7F8; }
-    .comparison-table tr.highlight-row td { background: #FFFDF5; }
-    .comparison-table tr.highlight-row td:first-child { border-left: 3px solid var(--color-gold); }
-    .table-app-cell { display: flex; align-items: center; gap: 10px; text-align: left; font-weight: 700; }
-    
-    .btn-table-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: var(--color-rose);
-      color: var(--color-white);
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 700;
-      transition: background 0.2s;
-    }
-    .btn-table-cta:hover { background: var(--color-rose-dark); }
-
-    /* ===== REVIEWS SECTION ===== */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; } }
-
-    .review-card {
-      background: var(--color-white);
-      border: 1px solid var(--color-gray-border);
-      border-radius: var(--radius-md);
-      padding: 22px;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .review-text { font-size: 13px; color: var(--color-dark-muted); line-height: 1.7; margin-bottom: 16px; }
-    .review-user-info { display: flex; align-items: center; gap: 12px; border-top: 1px solid #FAF4F6; padding-top: 12px; }
-    .user-avatar {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: var(--color-rose-light);
-      color: var(--color-rose);
-      font-weight: 700; font-size: 13px;
-      display: grid; place-items: center;
-      flex-shrink: 0;
-    }
-    .user-meta-name { font-size: 13px; font-weight: 700; color: var(--color-dark); }
-    .user-meta-detail { font-size: 11px; color: var(--color-gray-sub); }
-
-    /* ===== CVR BOOST: WHY MULTIPLE APPS? ===== */
-    .why-multiple-box {
-      background: linear-gradient(135deg, var(--color-rose-pale) 0%, #FFFDF8 100%);
-      border: 1.5px solid rgba(168, 50, 74, 0.2);
-      border-radius: var(--radius-lg);
-      padding: 36px 32px;
-      margin-top: 48px;
-    }
-    .why-title {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--color-rose-dark);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
-    .why-item {
-      background: var(--color-white);
-      border-radius: var(--radius-sm);
-      padding: 16px;
-      box-shadow: var(--shadow-sm);
-      text-align: center;
-    }
-    .why-item-num { font-family: var(--font-serif); font-size: 24px; font-weight: 900; color: var(--color-rose); }
-    .why-item-title { font-size: 14px; font-weight: 700; color: var(--color-dark); margin: 6px 0; }
-    .why-item-desc { font-size: 12px; color: var(--color-dark-muted); }
-
-    /* ===== FAQ ACCORDION ===== */
-    .faq-list { display: flex; flex-direction: column; gap: 14px; }
-    .faq-item {
-      background: var(--color-white);
-      border: 1px solid var(--color-gray-border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-    .faq-question {
-      padding: 18px 22px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--color-dark);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      list-style: none;
-    }
-    .faq-question::-webkit-details-marker { display: none; }
-    .faq-q-badge {
-      width: 26px; height: 26px;
-      background: var(--color-rose);
-      color: var(--color-white);
-      border-radius: 50%;
-      display: grid; place-items: center;
-      font-size: 13px; font-weight: 700;
-      margin-right: 12px;
-      flex-shrink: 0;
-    }
-    .faq-answer {
-      padding: 16px 22px 20px 60px;
-      font-size: 14px;
-      color: var(--color-dark-muted);
-      line-height: 1.8;
-      border-top: 1px solid #FAF4F6;
-      background: #FDFBFB;
-    }
-
-    /* ===== FOOTER & DISCLAIMER ===== */
-    footer {
-      background: #191617;
-      color: #B5ADB0;
-      padding: 56px 0 32px;
-      font-size: 13px;
-    }
-    .footer-logo {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--color-white);
-      margin-bottom: 12px;
-    }
-    .footer-logo span { color: var(--color-rose); }
-    .footer-disclaimer {
-      font-size: 11px;
-      color: #8A8285;
-      line-height: 1.8;
-      border-top: 1px solid #2B2628;
-      padding-top: 20px;
-      margin-top: 28px;
-    }
-
-    /* ===== FLOATING BOTTOM CTA (MOBILE HIGH-CVR INTERVENTION) ===== */
-    .floating-bottom-bar {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(31, 27, 28, 0.95);
-      backdrop-filter: blur(8px);
-      border-top: 1.5px solid var(--color-rose);
-      padding: 12px 16px;
-      z-index: 999;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-    .floating-bottom-bar.show { transform: translateY(0); }
-    .floating-bar-inner {
-      max-width: 1040px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .floating-bar-text { color: var(--color-white); font-size: 13px; font-weight: 700; }
-    .floating-bar-text span { color: var(--color-gold); font-size: 11px; display: block; font-weight: 400; }
-    .floating-bar-btn {
-      background: linear-gradient(135deg, var(--color-rose) 0%, #C03B56 100%);
-      color: var(--color-white);
-      font-size: 14px;
-      font-weight: 700;
-      padding: 10px 22px;
-      border-radius: 50px;
-      box-shadow: 0 4px 14px rgba(168, 50, 74, 0.4);
-      white-space: nowrap;
-      display: inline-flex; align-items: center; gap: 6px;
-    }
-    .floating-dismiss { color: #8A8285; font-size: 18px; padding: 4px; cursor: pointer; }
-
-    @media (max-width: 600px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-      .hero h1 { font-size: 26px; }
-      .hero-visual img { height: 260px; }
-      .btn-primary-lg { width: 100%; }
-      .floating-bar-text { font-size: 12px; }
-      .floating-bar-btn { padding: 9px 16px; font-size: 12px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="progress" aria-hidden="true"></div>
 
-<!-- Reusable Line Icon Symbols -->
-<svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
-  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M6 2v4M18 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/><circle cx="12" cy="12" r="10"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
-  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 6h16a2 2 0 0 1 2 2v11H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M16 12h5"/><circle cx="16" cy="12" r="1"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H3v2a4 4 0 0 1 4 4M17 6h4v2a4 4 0 0 1-4 4"/></symbol>
-  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3z"/></symbol>
-  <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
-</svg>
+  <div class="ad-disclosure">広告｜当サイトはアフィリエイト広告を利用しています。申込により運営者が報酬を受け取る場合があります。</div>
 
-<!-- ===== HEADER ===== -->
-<header>
-  <div class="container">
-    <div class="header-inner">
-      <div class="site-logo">
-        <div class="logo-badge"><svg class="icon-svg"><use href="#i-heart"/></svg></div>
-        婚活<span>ナビ</span>
-      </div>
-      <div class="header-nav">
-        <a href="#ranking" class="header-cta">
-          おすすめTOP6 <svg class="icon-svg"><use href="#i-arrow"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="婚活ナビ ホーム">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </span>
+        <span class="brand-name">婚活ナビ<span class="brand-note">MARRIAGE GUIDE</span></span>
+      </a>
 
-<!-- ===== BREADCRUMB ===== -->
-<nav class="breadcrumb" aria-label="パンくずリスト">
-  <div class="container">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="/" itemprop="item"><span itemprop="name">ホーム</span></a>
-        <meta itemprop="position" content="1">
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">婚活アプリおすすめ比較ランキング</span>
-        <meta itemprop="position" content="2">
-      </li>
-    </ol>
-  </div>
-</nav>
+      <nav class="nav" id="global-nav" aria-label="メインナビゲーション">
+        <a href="#verdict">編集部の結論</a>
+        <a href="#features">特徴</a>
+        <a href="#compare">比較</a>
+        <a href="#faq">よくある質問</a>
+        <a class="nav-cta" data-affiliate-link href="https://www.total-marriage.com/lp/gjcm01/" target="_blank" rel="nofollow sponsored noopener">無料相談を確認</a>
+      </nav>
 
-<div class="pr-disclosure">当サイトはプロモーション（アフィリエイト広告）を含みます</div>
-
-<!-- ===== HERO SECTION ===== -->
-<section class="hero" aria-label="メインビジュアル">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <svg class="icon-svg"><use href="#i-calendar"/></svg> 2026年8月最新 編集部検証済み
-        </div>
-        <h1>
-          運命のパートナーに出会う。<br>
-          後悔しない<em>婚活アプリ厳選比較</em>
-        </h1>
-        <p class="hero-lead">
-          真剣な結婚を望むあなたへ。会員の真剣度・年代・料金・安全性をプロが徹底調査。実績豊富な優良マッチングアプリTOP6を分かりやすく比較しました。
-        </p>
-        <div class="hero-tags">
-          <span class="hero-tag"><svg class="icon-svg"><use href="#i-check"/></svg> 女性基本無料あり</span>
-          <span class="hero-tag"><svg class="icon-svg"><use href="#i-shield"/></svg> 本人確認・独身証明あり</span>
-          <span class="hero-tag"><svg class="icon-svg"><use href="#i-users"/></svg> 累計2,500万人規模</span>
-        </div>
-        <div class="hero-cta-group">
-          <a href="#ranking" class="btn-primary-lg">
-            おすすめランキングを見る <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <a href="#diagnosis" class="btn-secondary-lg">
-            <svg class="icon-svg"><use href="#i-sparkles"/></svg> 30秒・診断で選ぶ
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <img src="assets/images/konkatsu-cafe-hero.jpg" alt="明るいカフェで自然に微笑み合う男女" width="1800" height="919" fetchpriority="high" decoding="async">
-        <div class="hero-visual-overlay">
-          <div class="hero-stats">
-            <div>
-              <div class="stat-val">6社</div>
-              <div class="stat-lbl">徹底比較</div>
-            </div>
-            <div>
-              <div class="stat-val">1,200+</div>
-              <div class="stat-lbl">リアル口コミ</div>
-            </div>
-            <div>
-              <div class="stat-val">2026年</div>
-              <div class="stat-lbl">最新データ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TABLE OF CONTENTS NAV ===== -->
-<nav class="toc-nav" aria-label="目次">
-  <div class="toc-nav-inner">
-    <a href="#diagnosis" class="toc-link">30秒診断</a>
-    <a href="#guide" class="toc-link">選び方4基準</a>
-    <a href="#ranking" class="toc-link">おすすめTOP6</a>
-    <a href="#comparison" class="toc-link">料金比較表</a>
-    <a href="#reviews" class="toc-link">利用者の声</a>
-    <a href="#faq" class="toc-link">よくある質問</a>
-  </div>
-</nav>
-
-<!-- ===== INTERACTIVE 30-SEC DIAGNOSIS MODULE (HIGH CVR INTERVENTION) ===== -->
-<div class="container" id="diagnosis">
-  <div class="diagnosis-card">
-    <div class="diagnosis-header">
-      <h2 class="diagnosis-title">
-        <svg class="icon-svg lg" style="color: var(--color-rose);"><use href="#i-sparkles"/></svg>
-        30秒でわかる！あなたにぴったりの婚活アプリ診断
-      </h2>
-      <p class="diagnosis-sub">質問に答えるだけで、編集部が最適なおすすめアプリを自動提案します</p>
-    </div>
-
-    <div class="diagnosis-steps">
-      <div>
-        <div class="diag-group-label">STEP 1: あなたの年代を選んでください</div>
-        <div class="diag-options" id="diag-age-group">
-          <button class="diag-btn active" data-age="20s">20代</button>
-          <button class="diag-btn" data-age="30s">30代</button>
-          <button class="diag-btn" data-age="40s">40代以上</button>
-          <button class="diag-btn" data-age="all">気にしない</button>
-        </div>
-      </div>
-      <div>
-        <div class="diag-group-label">STEP 2: 一番重視する目的は？</div>
-        <div class="diag-options" id="diag-goal-group">
-          <button class="diag-btn active" data-goal="members">会員数・出会いやすさ</button>
-          <button class="diag-btn" data-goal="marriage">1〜2年以内の本気婚活</button>
-          <button class="diag-btn" data-goal="value">内面・価値観の一致</button>
-          <button class="diag-btn" data-goal="cost">コスパ・手軽さ</button>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align: center;">
-      <button class="btn-primary-lg" id="btn-run-diag" style="padding: 12px 36px; font-size: 15px;">
-        診断結果を表示する <svg class="icon-svg"><use href="#i-arrow"/></svg>
+      <button class="menu-button" type="button" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
+  </header>
 
-    <div class="diagnosis-result-box" id="diag-result">
-      <div style="font-size: 12px; font-weight: 700; color: var(--color-sage);">あなたにおすすめのNo.1婚活アプリ</div>
-      <div class="result-app-name" id="result-app-title">Pairs（ペアーズ）</div>
-      <p class="result-reason" id="result-app-desc">豊富な会員数と充実した検索条件で、どの年代・地域でも理想の相手に出会いやすい王道アプリです。</p>
-      <a href="#" id="result-app-link" target="_blank" rel="nofollow sponsored noopener" class="btn-primary-lg" style="display: inline-flex; font-size: 14px; padding: 12px 28px;">
-        <span id="result-app-btn-text">Pairsに無料で登録してみる</span> <svg class="icon-svg"><use href="#i-arrow"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">2026.08.12 Updated · Fiore Guide</div>
+          <h1>婚活アプリに疲れたら。<br>次の一手を、<span class="hero-em">プロと決める。</span></h1>
+          <p class="hero-lead">結婚相談所フィオーレは、<strong>担当者のサポートとデータを組み合わせて活動を見直したい人</strong>の選択肢。本当に自分に合うか、無料相談前に3分で整理します。</p>
 
-<!-- ===== BEGINNER GUIDE SECTION ===== -->
-<section class="section" id="guide">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="section-title">失敗しない婚活アプリの選び方 4つの基準</h2>
-      <div class="section-title-line"></div>
-      <p class="section-desc">プロの編集部が注目する、成果が出るアプリ選びのポイント</p>
-    </div>
+          <div class="trust-row" aria-label="記事のポイント">
+            <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>公式情報を確認</span>
+            <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/></svg>注意点も掲載</span>
+            <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>向き不向きを比較</span>
+          </div>
 
-    <div class="guide-grid">
-      <div class="guide-card">
-        <div class="guide-icon"><svg class="icon-svg xl"><use href="#i-users"/></svg></div>
-        <h3>① 会員数の多さ</h3>
-        <p>会員数が多ければそれだけ地方や特定の希望条件でもマッチング率が高まります。まずは国内最大級のアプリを押さえるのが鉄則です。</p>
+          <div class="cta-row">
+            <a class="button-primary" data-affiliate-link href="https://www.total-marriage.com/lp/gjcm01/" target="_blank" rel="nofollow sponsored noopener">
+              無料相談の内容を見てみる
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+            </a>
+            <a class="button-secondary" href="#verdict">
+              まず向き不向きを確認
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg>
+            </a>
+            <p class="microcopy"><strong>相談は無料。</strong>入会時には規定の費用がかかります。料金と契約条件は面談で必ずご確認ください。</p>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="フィオーレの公式公開データ">
+          <div class="photo-frame">
+            <img src="assets/images/konkatsu-cafe-hero.jpg" alt="カフェで自然に会話する男女" width="1800" height="919" fetchpriority="high">
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">公式LP記載の登録会員数</span>
+            <span class="stat-number">75,000名+</span>
+            <span class="stat-note">2026年7月時点。複数ネットワークの重複を除く合算値。詳細は出典1。</span>
+          </div>
+          <div class="media-badge"><div><strong>14年</strong><span>累計成婚率<br>50%以上*</span></div></div>
+        </div>
       </div>
+    </section>
 
-      <div class="guide-card">
-        <div class="guide-icon"><svg class="icon-svg xl"><use href="#i-heart"/></svg></div>
-        <h3>② 利用者の真剣度</h3>
-        <p>「1年以内に結婚したい」利用者が多いアプリほど、やり取りから交際・結婚までのスピード感が早く確実です。</p>
+    <nav class="quick-nav container" aria-label="記事内ナビゲーション">
+      <div class="quick-nav-inner">
+        <a href="#verdict"><span class="quick-nav-num">01</span>結論</a>
+        <a href="#features"><span class="quick-nav-num">02</span>特徴</a>
+        <a href="#compare"><span class="quick-nav-num">03</span>比較</a>
+        <a href="#cautions"><span class="quick-nav-num">04</span>注意点</a>
       </div>
+    </nav>
 
-      <div class="guide-card">
-        <div class="guide-icon"><svg class="icon-svg xl"><use href="#i-wallet"/></svg></div>
-        <h3>③ 料金とコスパ</h3>
-        <p>女性は基本無料のものが多く、男性も月額3,000円〜4,000円程度。6ヶ月まとめプランなどでコストを抑えるのが賢い選択です。</p>
-      </div>
+    <section class="section" id="verdict">
+      <div class="container">
+        <div class="section-kicker">Editorial Verdict</div>
+        <h2 class="section-heading">結論：出会いの数より、<span class="accent">活動の質を整えたい人</span>に合う</h2>
+        <p class="section-intro">フィオーレの強みは、検索だけに頼らず、担当者・AI・活動データの3方向から婚活を見直せること。反対に、費用をかけず自分のペースだけで進めたい人は、まずアプリ継続のほうが合う可能性があります。</p>
 
-      <div class="guide-card">
-        <div class="guide-icon"><svg class="icon-svg xl"><use href="#i-shield"/></svg></div>
-        <h3>④ 安全性と証明書</h3>
-        <p>年齢確認・本人確認はもちろん、独身証明や収入証明の提出が可能なアプリはサクラや不審ユーザーが排除され安全です。</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="verdict-grid reveal">
+          <article class="verdict-main">
+            <span class="verdict-tag">編集部の見立て</span>
+            <h3 class="verdict-title">「なぜうまくいかないか分からない」を、相談できる環境に変えたいなら検討価値あり。</h3>
+            <p class="verdict-text">相談所選びではサービス名より、担当者との相性・必要なサポート・総費用の納得感が重要です。無料相談は即決の場ではなく、この3点を確かめる面談として使うのが堅実です。</p>
+          </article>
 
-<!-- ===== RANKING SECTION WITH INTERACTIVE FILTERS ===== -->
-<section class="section section-alt" id="ranking">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="section-title">婚活アプリおすすめランキング TOP6</h2>
-      <div class="section-title-line"></div>
-      <p class="section-desc">実績・会員数・口コミ・コスパを総合的に数値化して厳選</p>
-    </div>
-
-    <!-- Category Filter Tabs -->
-    <div class="filter-wrap">
-      <button class="filter-tab active" data-filter="all">すべて表示</button>
-      <button class="filter-tab" data-filter="20s">20代向け</button>
-      <button class="filter-tab" data-filter="30s">30代向け</button>
-      <button class="filter-tab" data-filter="40s">40代・再婚</button>
-      <button class="filter-tab" data-filter="serious">真剣婚活特化</button>
-      <button class="filter-tab" data-filter="free-female">女性完全無料</button>
-    </div>
-
-    <div class="ranking-list">
-
-      <!-- RANK 1: Pairs -->
-      <article class="app-card rank-top1" id="pairs" data-tags="20s 30s free-female">
-        <div class="top1-crown-banner">
-          <svg class="icon-svg"><use href="#i-trophy"/></svg> 2026年 総合No.1・累計会員数2,500万人突破
-        </div>
-        <div class="card-header-inner">
-          <div class="rank-number-badge gold">1</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #2F80D0 0%, #0056B3 100%);">P</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">Pairs（ペアーズ）</h3>
-              <span class="badge-recommend gold">20代・30代の王道</span>
-            </div>
-            <p class="app-catchcopy">国内最大級の会員数！圧倒的な出会いのチャンスと安心の利用環境</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★★</span>
-              <span class="rating-score">4.8</span>
-              <span class="rating-count">（口コミ1,204件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男性月額</div>
-              <div class="spec-val">3,700<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">女性月額</div>
-              <div class="spec-val"><em>完全無料</em></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">累計会員数</div>
-              <div class="spec-val">2,500<small>万人</small></div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>累計95万人以上の交際・結婚実績。圧倒的なマッチング実績を誇る</li>
-            <li>150,000種以上の「コミュニティ」機能で、趣味や価値観の合うお相手がすぐ見つかる</li>
-            <li>年齢確認・本人確認・24時間365日監視体制で初心者でも安心して利用可能</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            婚活を始めるなら<strong>まず最初に登録すべき1冊目の定番アプリ</strong>。圧倒的な会員数を誇るため、地方在住の方や特定のこだわり条件がある方でもマッチングがスムーズです。
-          </div>
-
-          <a href="https://t.afi-b.com/visit.php?a=P8877e-g326269Z&amp;p=w891789g" target="_blank" rel="nofollow sponsored noopener" class="app-cta-btn">
-            Pairs（ペアーズ）公式で無料でお相手を探す <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ プロフィール登録・いいね送信まで完全無料で試せます</p>
-        </div>
-      </article>
-
-      <!-- RANK 2: Omiai -->
-      <article class="app-card" id="omiai" data-tags="30s 40s serious free-female">
-        <div class="card-header-inner">
-          <div class="rank-number-badge silver">2</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #D96E63 0%, #B8473C 100%);">O</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">Omiai（オミアイ）</h3>
-              <span class="badge-recommend">真剣結婚志望向け</span>
-            </div>
-            <p class="app-catchcopy">「結婚を前提とした出会い」を求める30代以上の男女から圧倒的支持</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★★</span>
-              <span class="rating-score">4.6</span>
-              <span class="rating-count">（口コミ876件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男性月額</div>
-              <div class="spec-val">3,900<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">女性月額</div>
-              <div class="spec-val"><em>完全無料</em></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">累計会員数</div>
-              <div class="spec-val">1,000<small>万人</small></div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>会員の約8割が「2〜3年以内の結婚」を希望する真剣婚活ユーザー</li>
-            <li>独自のイエローカード機能や厳重なセキュリティで悪質ユーザーを排除</li>
-            <li>30代前半〜40代の落ち着いた会員層が多く、誠実な会話ができる</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            恋活よりも<strong>「本格的な結婚」を意識した落ち着いたお相手が多い</strong>のが最大の特徴。ペアーズと併用することで、質の高い婚活が実現できます。
-          </div>
-
-          <a href="https://t.afi-b.com/visit.php?a=N9796S-C326270b&amp;p=w891789g" target="_blank" rel="nofollow sponsored noopener" class="app-cta-btn">
-            Omiai（オミアイ）に無料登録してみる <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ 無料登録でどのような会員がいるか今すぐチェックできます</p>
-        </div>
-      </article>
-
-      <!-- RANK 3: with -->
-      <article class="app-card" id="with" data-tags="20s 30s">
-        <div class="card-header-inner">
-          <div class="rank-number-badge bronze">3</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #7357A6 0%, #523785 100%);">W</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">with（ウィズ）</h3>
-              <span class="badge-recommend">相性・価値観重視</span>
-            </div>
-            <p class="app-catchcopy">心理テストと性格診断で「内面がぴったり合う」お相手が見つかる</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★☆</span>
-              <span class="rating-score">4.5</span>
-              <span class="rating-count">（口コミ743件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男性月額</div>
-              <div class="spec-val">3,600<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">女性月額</div>
-              <div class="spec-val"><em>完全無料</em></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">累計会員数</div>
-              <div class="spec-val">1,000<small>万人</small></div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>心理学・統計学に基づいた独自の診断イベントで好相性の人と出会える</li>
-            <li>トークのアドバイス機能や共通点表示で奥手な方でも会話が弾みやすい</li>
-            <li>20代〜30代前半の価値観重視な会員が多数在籍</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            外見や条件だけでなく、<strong>「性格や価値観の一致」を第一に考えたい方に最適</strong>。アドバイス機能が親切なため、マッチングアプリ初心者でも安心です。
-          </div>
-
-          <a href="https://with.is/" target="_blank" rel="nofollow noopener" class="app-cta-btn">
-            with（ウィズ）公式サイトで無料登録してみる <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ 心理テスト・診断コンテンツは無料で楽しめます</p>
-        </div>
-      </article>
-
-      <!-- RANK 4: タップル -->
-      <article class="app-card" id="tapple" data-tags="20s free-female">
-        <div class="card-header-inner">
-          <div class="rank-number-badge">4</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #E8417A 0%, #C02055 100%);">T</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">タップル（tapple）</h3>
-              <span class="badge-recommend">20代の恋活・婚活</span>
-            </div>
-            <p class="app-catchcopy">行きたいデートプランや趣味からサクサクつながる</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★☆</span>
-              <span class="rating-score">4.3</span>
-              <span class="rating-count">（口コミ612件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男性月額</div>
-              <div class="spec-val">3,700<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">女性月額</div>
-              <div class="spec-val"><em>完全無料</em></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">累計会員数</div>
-              <div class="spec-val">1,900<small>万人</small></div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>「おでかけ機能」で24時間以内にデートの相手を見つけられる</li>
-            <li>20代前半〜後半が中心。フットワークの軽い爽やかな出会い</li>
-            <li>プロフィール項目がシンプルで、婚活アプリが初めての人でも5分で登録完了</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            「まずは気軽に出会いを増やしたい」という<strong>婚活初心者の1本目に最適</strong>。ペアーズやwithと併用すれば、母数を増やしながら本命を見極められます。
-          </div>
-
-          <a href="https://tapple.me/" target="_blank" rel="nofollow noopener" class="app-cta-btn">
-            タップル公式サイトで無料登録してみる <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ おでかけ機能・メッセージ交換まで無料で試せます</p>
-        </div>
-      </article>
-
-      <!-- RANK 5: marrish -->
-      <article class="app-card" id="marrish" data-tags="30s 40s serious">
-        <div class="card-header-inner">
-          <div class="rank-number-badge">5</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #4D8A72 0%, #2F604D 100%);">M</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">marrish（マリッシュ）</h3>
-              <span class="badge-recommend">30〜50代・シンママシンパパ応援</span>
-            </div>
-            <p class="app-catchcopy">再婚・バツイチ理解者に特化した温かな婚活環境</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★☆</span>
-              <span class="rating-score">4.4</span>
-              <span class="rating-count">（口コミ489件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男性月額</div>
-              <div class="spec-val">3,400<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">女性月額</div>
-              <div class="spec-val"><em>完全無料</em></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">会員層</div>
-              <div class="spec-val">30〜50代</div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>再婚・シンママ・シンパパ優遇プログラムが充実</li>
-            <li>声で人柄が伝わる「声プロフィール」やビデオ通話機能あり</li>
-            <li>年齢や離婚・死別歴を理由に他アプリで悩んだ人ほど「わかってもらえる」と高評価</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            再婚活・シングルマザーシングルファーザーの婚活に<strong>理解のある会員が集まる希少な環境</strong>。他アプリで気後れした経験がある方こそ試す価値があります。
-          </div>
-
-          <a href="https://marrish.com/" target="_blank" rel="nofollow noopener" class="app-cta-btn">
-            マリッシュ公式で無料登録 <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ プロフィール閲覧・いいね送信は無料で試せます</p>
-        </div>
-      </article>
-
-      <!-- RANK 6: youbride -->
-      <article class="app-card" id="youbride" data-tags="30s 40s serious">
-        <div class="card-header-inner">
-          <div class="rank-number-badge">6</div>
-          <div class="app-logo-badge" style="background: linear-gradient(135deg, #C58B35 0%, #9B671D 100%);">Y</div>
-          <div class="app-main-info">
-            <div class="app-name-wrap">
-              <h3 class="app-name">youbride（ユーブライド）</h3>
-              <span class="badge-recommend">成婚実績重視の老舗</span>
-            </div>
-            <p class="app-catchcopy">過去5年で1万人以上の成婚者を輩出した成婚特化アプリ</p>
-            <div class="app-rating-row">
-              <span class="rating-stars">★★★★☆</span>
-              <span class="rating-score">4.3</span>
-              <span class="rating-count">（口コミ350件）</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-body-inner">
-          <div class="spec-grid">
-            <div class="spec-box">
-              <div class="spec-label">男女共通月額</div>
-              <div class="spec-val">4,300<small>円〜</small></div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">成婚退会者</div>
-              <div class="spec-val">年間2,000人超</div>
-            </div>
-            <div class="spec-box">
-              <div class="spec-label">証明書対応</div>
-              <div class="spec-val">独身・年収</div>
-            </div>
-          </div>
-
-          <ul class="points-list">
-            <li>1988年創業のIBJグループ運営。婚活サービスとしての歴史と実績が豊富</li>
-            <li>男女同料金制で、真剣に結婚を考える会員のみが集まりやすい設計</li>
-            <li>独身証明書・収入証明書の提出が可能で、条件重視の30〜50代に人気</li>
-          </ul>
-
-          <div class="editor-comment">
-            <div class="editor-comment-title">
-              <svg class="icon-svg"><use href="#i-lightbulb"/></svg> 編集部チェック
-            </div>
-            結婚相談所グループが運営する<strong>安心感と成婚実績を重視するなら本命候補</strong>。30代後半〜50代でしっかり条件を絞って婚活したい方におすすめです。
-          </div>
-
-          <a href="https://youbride.jp/" target="_blank" rel="nofollow noopener" class="app-cta-btn">
-            ユーブライド公式で無料体験 <svg class="icon-svg"><use href="#i-arrow"/></svg>
-          </a>
-          <p class="app-cta-sub">※ 登録・お相手探しは無料。メッセージ交換から有料プランです</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== COMPARISON TABLE SECTION ===== -->
-<section class="section" id="comparison">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="section-title">人気婚活アプリ一括比較表</h2>
-      <div class="section-title-line"></div>
-      <p class="section-desc">料金・会員数・特徴を並べて確認できます</p>
-    </div>
-
-    <div class="table-scroll-container">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>アプリ名</th>
-            <th>総合評価</th>
-            <th>男性月額</th>
-            <th>女性月額</th>
-            <th>おすすめ年代</th>
-            <th>真剣度</th>
-            <th>無料登録</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-row">
-            <td>
-              <div class="table-app-cell">
-                <span style="color: var(--color-gold); font-weight: 900;">1位</span>
-                Pairs（ペアーズ）
-              </div>
-            </td>
-            <td><strong style="color: var(--color-rose);">4.8</strong> ★★★★★</td>
-            <td>3,700円〜</td>
-            <td><strong style="color: var(--color-rose);">完全無料</strong></td>
-            <td>20代〜30代</td>
-            <td>高（恋活・婚活）</td>
-            <td><a href="https://t.afi-b.com/visit.php?a=P8877e-g326269Z&amp;p=w891789g" target="_blank" rel="nofollow sponsored noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="table-app-cell">
-                <span style="color: #7A828A; font-weight: 900;">2位</span>
-                Omiai（オミアイ）
-              </div>
-            </td>
-            <td><strong>4.6</strong> ★★★★★</td>
-            <td>3,900円〜</td>
-            <td><strong style="color: var(--color-rose);">完全無料</strong></td>
-            <td>30代〜40代</td>
-            <td>最高（本気婚活）</td>
-            <td><a href="https://t.afi-b.com/visit.php?a=N9796S-C326270b&amp;p=w891789g" target="_blank" rel="nofollow sponsored noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="table-app-cell">
-                <span style="color: #A8715A; font-weight: 900;">3位</span>
-                with（ウィズ）
-              </div>
-            </td>
-            <td><strong>4.5</strong> ★★★★☆</td>
-            <td>3,600円〜</td>
-            <td><strong style="color: var(--color-rose);">完全無料</strong></td>
-            <td>20代〜30代前半</td>
-            <td>中〜高（内面重視）</td>
-            <td><a href="https://with.is/" target="_blank" rel="nofollow noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-          <tr>
-            <td><div class="table-app-cell">4位 タップル</div></td>
-            <td><strong>4.3</strong> ★★★★☆</td>
-            <td>3,700円〜</td>
-            <td><strong style="color: var(--color-rose);">完全無料</strong></td>
-            <td>20代前半〜後半</td>
-            <td>中（カジュアル）</td>
-            <td><a href="https://tapple.me/" target="_blank" rel="nofollow noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-          <tr>
-            <td><div class="table-app-cell">5位 marrish</div></td>
-            <td><strong>4.4</strong> ★★★★☆</td>
-            <td>3,400円〜</td>
-            <td><strong style="color: var(--color-rose);">完全無料</strong></td>
-            <td>30代〜50代・再婚</td>
-            <td>最高（再婚・婚活）</td>
-            <td><a href="https://marrish.com/" target="_blank" rel="nofollow noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-          <tr>
-            <td><div class="table-app-cell">6位 youbride</div></td>
-            <td><strong>4.3</strong> ★★★★☆</td>
-            <td>4,300円〜</td>
-            <td>4,300円〜</td>
-            <td>30代〜50代</td>
-            <td>最高（成婚実績重視）</td>
-            <td><a href="https://youbride.jp/" target="_blank" rel="nofollow noopener" class="btn-table-cta">無料登録 ›</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ===== REVIEWS SECTION ===== -->
-<section class="section section-alt" id="reviews">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="section-title">実際にアプリで成婚した人のリアルな声</h2>
-      <div class="section-title-line"></div>
-      <p class="section-desc">編集部に寄せられたユーザー体験談</p>
-    </div>
-
-    <div class="reviews-grid">
-      <div class="review-card">
-        <p class="review-text">「Pairsで趣味が一致する彼と出会い、交際半年でプロポーズされました！コミュニティ検索で価値観の近い人と最初から出会えたのが成功の理由だと思います。」</p>
-        <div class="review-user-info">
-          <div class="user-avatar">女性</div>
-          <div>
-            <div class="user-meta-name">K.Sさん（31歳・会社員）</div>
-            <div class="user-meta-detail">利用アプリ：Pairs（ペアーズ）</div>
+          <div class="fit-list">
+            <article class="fit-card">
+              <div class="fit-card-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>向いている人</div>
+              <p>1年以内の結婚を意識し、第三者のフィードバックを前向きに取り入れられる。</p>
+            </article>
+            <article class="fit-card">
+              <div class="fit-card-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 4.1 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4.1a2 2 0 0 0-3.4 0Z"/></svg>慎重に考えたい人</div>
+              <p>月々の活動費を抑えたい、または担当者との定期的な連絡を負担に感じる。</p>
+            </article>
+            <article class="fit-card">
+              <div class="fit-card-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>相談時に確認</div>
+              <p>活動期間、コースごとの紹介方法、休会・中途解約の条件まで書面で確認する。</p>
+            </article>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="review-card">
-        <p class="review-text">「Omiaiはとにかく誠実で真剣な女性が多く、やり取りが非常にスムーズでした。30代での婚活で不安でしたが、登録して3ヶ月で現在の妻と出会えました。」</p>
-        <div class="review-user-info">
-          <div class="user-avatar">男性</div>
-          <div>
-            <div class="user-meta-name">T.Mさん（35歳・公務員）</div>
-            <div class="user-meta-detail">利用アプリ：Omiai（オミアイ）</div>
+    <section class="section section-mint" id="features">
+      <div class="container">
+        <div class="section-kicker">Why Fiore</div>
+        <h2 class="section-heading">フィオーレを検討する<span class="accent">4つの理由</span></h2>
+        <p class="section-intro">数字だけを大きく見せず、「その機能が自分の婚活にどう役立つか」まで整理しました。</p>
+
+        <div class="proof-grid">
+          <article class="proof-card reveal">
+            <div class="proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m7-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+            <h3>登録会員75,000名以上<sup>※1</sup></h3>
+            <p>希望条件だけで候補を狭めすぎず、担当者紹介やAI提案も含めて出会い方を広げられます。</p>
+          </article>
+          <article class="proof-card reveal">
+            <div class="proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <h3>検索・申込数が無制限<sup>※2</sup></h3>
+            <p>申込数の上限を気にせず動ける点が特徴。実際に利用できる範囲は選択コースで確認しましょう。</p>
+          </article>
+          <article class="proof-card reveal">
+            <div class="proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.9 4.9l2.8 2.8m8.6 8.6 2.8 2.8M2 12h4m12 0h4M4.9 19.1l2.8-2.8m8.6-8.6 2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <h3>AIと担当者の両面紹介</h3>
+            <p>条件検索だけでは見つけにくい相性をデータで補い、人柄や活動状況は担当者が支えます。</p>
+          </article>
+          <article class="proof-card reveal">
+            <div class="proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-5 3 3 5-7"/></svg></div>
+            <h3>活動をデータで振り返る</h3>
+            <p>活動分析レポートを使い、申込や交際の傾向を客観視。自己流で同じ失敗を重ねる状態から抜け出しやすくします。</p>
+          </article>
+        </div>
+
+        <div class="needs-panel reveal">
+          <div class="needs-quote">
+            <strong>結婚相談所選びの決め手は、料金だけではありません。</strong>
+            <p>TMS活動中会員2,340名への調査（2025年9月実施）</p>
+          </div>
+          <div class="needs-data">
+            <div class="bar-item">
+              <div class="bar-label"><span>仲人・カウンセラーの人柄やサポート</span><strong>男性31.0% / 女性32.7%</strong></div>
+              <div class="bar-track"><div class="bar-fill" style="--value: 82%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label"><span>費用やプラン内容</span><strong>男性19.9% / 女性21.1%</strong></div>
+              <div class="bar-track"><div class="bar-fill" style="--value: 53%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label"><span>会員数やシステム</span><strong>男性17.2% / 女性14.2%</strong></div>
+              <div class="bar-track"><div class="bar-fill" style="--value: 42%"></div></div>
+            </div>
+            <p class="data-note">※複数回答。棒の長さは最大値を基準に相対表示。出典：TMS全国結婚事業者連盟（出典3）。調査主体はフィオーレと同じTMSグループに関連するため、参考情報として扱っています。</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="review-card">
-        <p class="review-text">「withの性格診断をきっかけにマッチングした相手と意気投合。お互いの内面をよく理解してから会えたので、初対面でも会話が一切途切れませんでした。」</p>
-        <div class="review-user-info">
-          <div class="user-avatar">女性</div>
-          <div>
-            <div class="user-meta-name">A.Yさん（28歳・看護師）</div>
-            <div class="user-meta-detail">利用アプリ：with（ウィズ）</div>
+    <section class="section" id="compare">
+      <div class="container">
+        <div class="section-kicker">Simple Comparison</div>
+        <h2 class="section-heading">アプリを続ける？<br><span class="accent">結婚相談所へ切り替える？</span></h2>
+        <p class="section-intro">どちらが優れているかではなく、今の課題に合うほうを選ぶことが大切です。</p>
+
+        <div class="compare-wrap reveal" role="region" aria-label="婚活アプリとフィオーレの比較" tabindex="0">
+          <table class="compare-table">
+            <thead>
+              <tr><th>比較軸</th><th>婚活アプリ</th><th>フィオーレ</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>始めやすさ</th><td>スマホで登録し、自分のペースで始めやすい</td><td>無料相談で活動方針を整理してから検討</td></tr>
+              <tr><th>費用感</th><td>比較的抑えやすい</td><td>入会金・月会費などが必要。コース確認が必須</td></tr>
+              <tr><th>相手の確認</th><td>本人確認が中心。提出書類はサービスごとに異なる</td><td>独身証明・年収証明などを提出<sup>※2</sup></td></tr>
+              <tr><th>活動サポート</th><td>基本は自分で検索・メッセージ</td><td>担当者への相談、紹介、活動分析がある</td></tr>
+              <tr><th>向いている状態</th><td>自走できる／費用を抑えたい</td><td>結婚時期が明確／婚活を立て直したい</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-mint" id="cautions">
+      <div class="container">
+        <div class="section-kicker">Before You Book</div>
+        <h2 class="section-heading">予約前に知っておきたい、<span class="accent">良い点と注意点</span></h2>
+
+        <div class="caution-grid">
+          <article class="caution-card good reveal">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>検討しやすいポイント</h3>
+            <ul class="caution-list">
+              <li>来店またはオンラインで無料相談ができる</li>
+              <li>担当者・AI・検索という複数の出会い方がある</li>
+              <li>独身証明書などの提出を求める仕組みがある</li>
+              <li>活動データを振り返り、改善点を相談できる</li>
+            </ul>
+          </article>
+          <article class="caution-card check reveal">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 4.1 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4.1a2 2 0 0 0-3.4 0Z"/></svg>面談で必ず確認</h3>
+            <ul class="caution-list">
+              <li>初期費用・月会費・オプションを含む総額</li>
+              <li>選ぶコースで使える紹介方法と申込上限</li>
+              <li>担当者の変更可否と連絡頻度</li>
+              <li>休会、中途解約、クーリングオフの条件</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="flow">
+      <div class="container">
+        <div class="section-kicker">3 Steps</div>
+        <h2 class="section-heading">無料相談は、<br>入会を決める前の<span style="color:#F4B7B2">相性確認</span>に使う</h2>
+        <p class="section-intro">その場で急いで決めず、自分の希望と説明内容が合っているかを順番に確認しましょう。</p>
+
+        <div class="journey">
+          <article class="step reveal">
+            <div class="step-num">01</div>
+            <h3>相談日時を選ぶ</h3>
+            <p>来店・オンラインなど、公式ページで選べる相談方法を確認します。</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">02</div>
+            <h3>希望と悩みを伝える</h3>
+            <p>結婚時期、活動歴、今困っていることを率直に共有します。</p>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">03</div>
+            <h3>書面で比較する</h3>
+            <p>料金・支援範囲・契約条件を持ち帰り、他の候補とも比較します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" id="guide">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div class="cta-panel-grid">
+            <div>
+              <div class="section-kicker">Free Counseling</div>
+              <h2>自分の婚活に必要な支援か、<br>まずは話を聞いて確かめる。</h2>
+              <p>相談前に「希望する結婚時期・毎月の予算・支援してほしいこと」の3つをメモしておくと、短い時間でも判断材料を集めやすくなります。</p>
+            </div>
+            <div class="cta-panel-action">
+              <a class="button-primary" data-affiliate-link href="https://www.total-marriage.com/lp/gjcm01/" target="_blank" rel="nofollow sponsored noopener">
+                公式の無料相談を確認
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+              </a>
+              <small>外部サイトへ移動します／予約内容をご確認ください</small>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- CVR Boost Module: Why Register for Multiple Apps? -->
-    <div class="why-multiple-box">
-      <h3 class="why-title">💡 婚活成功者の84%が「2つ以上のアプリ」を同時に無料登録しています</h3>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-item-num">2.8倍</div>
-          <div class="why-item-title">出会えるお相手の増加</div>
-          <div class="why-item-desc">異なるユーザー層にアプローチでき、出会いの母数が一気に広がります。</div>
-        </div>
-        <div class="why-item">
-          <div class="why-item-num">0円</div>
-          <div class="why-item-title">無料登録で比較可能</div>
-          <div class="why-item-desc">ほとんどのアプリが登録〜マッチングまでは無料で試せます。</div>
-        </div>
-        <div class="why-item">
-          <div class="why-item-num">1/2</div>
-          <div class="why-item-title">成婚までの期間短縮</div>
-          <div class="why-item-desc">同時進行で自分に最も合うアプリを素早く見つけられます。</div>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-kicker">FAQ</div>
+        <h2 class="section-heading">よくある質問</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>無料相談を受けたら、必ず入会しなければいけませんか？</summary>
+            <div class="faq-answer">無料相談はサービス内容や担当者との相性を確認する場です。入会判断は、料金・サポート範囲・活動条件の説明を確認したうえで持ち帰って検討しましょう。</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>フィオーレはどんな人に向いていますか？</summary>
+            <div class="faq-answer">結婚への意思が明確で、自己流の婚活を見直したい人や、担当者から客観的なフィードバックを受けたい人に向いています。</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>相談前に何を決めておくとよいですか？</summary>
+            <div class="faq-answer">希望する結婚時期、毎月の活動予算、サポートしてほしい範囲を大まかに整理しておくと、相談所が自分に合うか比較しやすくなります。</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>紹介される相手の身元確認はありますか？</summary>
+            <div class="faq-answer">公式サイトでは、入会時に独身証明書や身分証明書、年収証明などの提出を求めていると案内されています。提出書類の対象や条件は無料相談で確認してください。</div>
+          </details>
         </div>
       </div>
+    </section>
+
+    <section class="section-tight" aria-labelledby="sources-heading">
+      <div class="container">
+        <div class="sources">
+          <h2 id="sources-heading">出典・編集方針</h2>
+          <ol>
+            <li><a href="https://www.total-marriage.com/lp/gjcm01/" target="_blank" rel="noopener">フィオーレ公式LP</a>：登録会員数75,000名以上（2026年7月時点）、14年累計成婚率50%以上。成婚率は2012～2025年の全退会者16,692名のうち、同社サービスを利用して成婚退会した8,684名の割合。</li>
+            <li><a href="https://omiai.tms-m.com/" target="_blank" rel="noopener">フィオーレ公式サイト</a>：検索・申込、サポート、提出書類、無料相談に関する情報。サービス範囲はコースや時期で変わる可能性があります。</li>
+            <li><a href="https://www.nakoudonet.com/infos/139948/" target="_blank" rel="noopener">TMS全国結婚事業者連盟「結婚相談所の選び方」</a>：活動中会員2,340名への調査。調査主体とサービスの関係性を踏まえ、参考値として掲載。</li>
+            <li>当サイトは広告掲載の有無だけで優劣を断定せず、公式情報の確認日、向き不向き、注意点を明記します。最終確認日：2026年8月12日。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">婚活ナビ</div>
+          <p class="footer-copy">迷いの多い婚活サービス選びを、根拠と比較軸でシンプルに。公式情報を確認し、向いている人・向かない人の両方を伝えます。</p>
+        </div>
+        <p class="footer-disclosure"><strong>広告表記：</strong>当サイトはアフィリエイトプログラムに参加しています。掲載リンクを経由して申込が行われた場合、運営者が広告主から報酬を受け取ることがあります。利用者が支払う料金に影響はありません。掲載内容は調査時点の情報であり、最新の料金・条件は必ず公式サイトでご確認ください。</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 婚活ナビ</span>
+        <span>最終更新：2026年8月12日</span>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ===== FAQ SECTION ===== -->
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-heading">
-      <h2 class="section-title">婚活アプリに関するよくある質問（FAQ）</h2>
-      <div class="section-title-line"></div>
-    </div>
+  <aside class="sticky-cta" aria-label="無料相談への案内">
+    <div class="sticky-copy"><strong>フィオーレが自分に合うか確認</strong><span>料金・担当者・活動方針を無料相談で比較</span></div>
+    <a class="sticky-button" data-affiliate-link href="https://www.total-marriage.com/lp/gjcm01/" target="_blank" rel="nofollow sponsored noopener">無料相談を見る →</a>
+    <button class="sticky-close" type="button" aria-label="案内を閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </aside>
 
-    <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            婚活アプリと従来の出会い系サイトの違いは何ですか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          婚活アプリは「真剣な結婚・交際」を前提としたサービスです。公的身分証明書（運転免許証やパスポート）による厳格な年齢・本人確認が義務付けられており、24時間体制でサクラや不正ユーザーを監視・排除しています。
-        </div>
-      </details>
+  <script>
+    (() => {
+      'use strict';
 
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            女性は本当に完全無料で使えますか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          はい。Pairs（ペアーズ）、Omiai、タップル、withなどは女性の基本機能（プロフィール閲覧・いいね・マッチング・メッセージ交換）が全て完全無料で利用できます。
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            30代・40代でも婚活アプリで結婚できますか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          はい、十分可能です。<a href="#pairs" style="color: var(--color-rose); text-decoration: underline;">ペアーズ</a>や<a href="#omiai" style="color: var(--color-rose); text-decoration: underline;">Omiai</a>、<a href="#youbride" style="color: var(--color-rose); text-decoration: underline;">youbride</a>は30代・40代の婚活利用者が多く、高い成婚率を記録しています。
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            身バレが心配なのですが、知人にバレずに利用できますか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          ほとんどのアプリでFacebook連携や電話番号登録による「知人非表示機能」が備わっています。また、プロフィール写真の非公開設定や、プライベートモード機能を活用すれば周りにバレずに婚活が可能です。
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            複数の婚活アプリを同時に使っても大丈夫ですか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          むしろ2〜3個の無料登録を併用することが成功の近道です。出会えるお相手の数が2.8倍に増え、自分に一番合うアプリを見つけやすくなります。詳しくは<a href="#ranking" style="color: var(--color-rose); text-decoration: underline;">おすすめランキング</a>で相性の良い組み合わせをチェックしてください。
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            婚活アプリの料金相場はどれくらいですか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          女性は基本無料のアプリが大半で、男性は月額3,000円台後半〜4,300円程度が相場です（<a href="#comparison" style="color: var(--color-rose); text-decoration: underline;">料金比較表</a>を参照）。6ヶ月プランなど長期契約で1ヶ月あたりの単価を下げられるアプリも多く、まずは無料登録でどこまで試せるか確認するのがおすすめです。
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-question">
-          <div style="display: flex; align-items: center;">
-            <span class="faq-q-badge">Q</span>
-            サクラや業者はいませんか？見分け方はありますか？
-          </div>
-        </summary>
-        <div class="faq-answer">
-          本記事で紹介しているアプリはいずれも年齢確認・本人確認を法律に基づき義務化しており、サクラは存在しません。ただし勧誘目的の「業者」に注意が必要な点は共通です。極端に整った容姿の写真のみ・すぐ外部SNSやLINEへ誘導する・お金の話を持ちかける、といった相手には注意し、不審に感じたら運営に通報しましょう。
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER & DISCLAIMER ===== -->
-<footer>
-  <div class="container">
-    <div class="footer-logo">婚活<span>ナビ</span></div>
-    <p>当サイトは婚活・マッチングアプリの情報を比較・検証する専門メディアです。各アプリの公式発表データ・利用規約・実際のユーザー口コミをもとに編集部が調査し、客観的な基準で厳選した情報をお届けしています。</p>
-    <p style="font-size: 12px; color: var(--color-gray-sub); margin-top: 8px;">最終更新日：2026年8月8日／執筆・編集：婚活ナビ編集部</p>
-
-    <div class="footer-disclaimer">
-      【広告表記】当サイトはアフィリエイトプログラム（成果報酬型広告）に参加しており、掲載リンク経由で申し込みがあった場合に各社から成果報酬を得る場合があります。ランキングや評価は編集部の調査基準に基づくものであり、広告掲載の有無が評価内容を左右することはありません。
-      <br>【免責事項】掲載情報は各サービスの公式サイトや利用規約に基づき定期的に更新しておりますが、最新の料金やキャンペーン情報等は必ず各社公式サイトにてご確認ください。
-      <br>© 2026 婚活ナビ All Rights Reserved.
-    </div>
-  </div>
-</footer>
-
-<!-- ===== FLOATING MOBILE BOTTOM CTA ===== -->
-<div class="floating-bottom-bar" id="floating-bar">
-  <div class="floating-bar-inner">
-    <div class="floating-bar-text">
-      人気No.1 ペアーズを無料でお試し
-      <span>累計2,500万人突破・登録＆検索無料</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <a href="https://t.afi-b.com/visit.php?a=P8877e-g326269Z&amp;p=w891789g" target="_blank" rel="nofollow sponsored noopener" class="floating-bar-btn">
-        無料登録する <svg class="icon-svg"><use href="#i-arrow"/></svg>
-      </a>
-      <span class="floating-dismiss" id="floating-dismiss">&times;</span>
-    </div>
-  </div>
-</div>
-
-<!-- ===== INLINE JAVASCRIPT ===== -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  /* 1. 30-Second Diagnosis Interactive Logic */
-  const diagAgeBtns = document.querySelectorAll('#diag-age-group .diag-btn');
-  const diagGoalBtns = document.querySelectorAll('#diag-goal-group .diag-btn');
-  const btnRunDiag = document.getElementById('btn-run-diag');
-  const diagResultBox = document.getElementById('diag-result');
-  
-  const resultTitle = document.getElementById('result-app-title');
-  const resultDesc = document.getElementById('result-app-desc');
-  const resultLink = document.getElementById('result-app-link');
-  const resultBtnText = document.getElementById('result-app-btn-text');
-
-  let selectedAge = '20s';
-  let selectedGoal = 'members';
-
-  diagAgeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      diagAgeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedAge = btn.dataset.age;
-    });
-  });
-
-  diagGoalBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      diagGoalBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedGoal = btn.dataset.goal;
-    });
-  });
-
-  btnRunDiag.addEventListener('click', () => {
-    diagResultBox.style.display = 'block';
-    diagResultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-    if (selectedGoal === 'marriage' || selectedAge === '40s') {
-      resultTitle.textContent = 'Omiai（オミアイ）';
-      resultDesc.textContent = '30代〜40代の真剣婚活に特化！結婚への意識が高いお相手と出会える確率が最も高いアプリです。';
-      resultLink.href = 'https://t.afi-b.com/visit.php?a=N9796S-C326270b&p=w891789g';
-      resultBtnText.textContent = 'Omiaiに無料で登録してみる';
-    } else if (selectedGoal === 'value') {
-      resultTitle.textContent = 'with（ウィズ）';
-      resultDesc.textContent = '心理テストと価値観診断で相性抜群のお相手を判定！内面重視の婚活に一番おすすめです。';
-      resultLink.href = '#ranking';
-      resultBtnText.textContent = 'withに無料で登録してみる';
-    } else {
-      resultTitle.textContent = 'Pairs（ペアーズ）';
-      resultDesc.textContent = '会員数2,500万人！条件検索も豊富で、あなたの理想の相手が一番見つかりやすい王道アプリです。';
-      resultLink.href = 'https://t.afi-b.com/visit.php?a=P8877e-g326269Z&p=w891789g';
-      resultBtnText.textContent = 'Pairsに無料で登録してみる';
-    }
-  });
-
-  /* 2. Interactive Category Filter Tabs */
-  const filterTabs = document.querySelectorAll('.filter-tab');
-  const appCards = document.querySelectorAll('.app-card');
-
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const filter = tab.dataset.filter;
-
-      appCards.forEach(card => {
-        const tags = card.dataset.tags || '';
-        if (filter === 'all' || tags.includes(filter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+      // afb提携承認後はhtml[data-offer-url]の1箇所だけを発行済み広告URLへ変更する。
+      const offerUrl = document.documentElement.dataset.offerUrl;
+      document.querySelectorAll('[data-affiliate-link]').forEach((link) => {
+        link.href = offerUrl;
+        link.addEventListener('click', () => {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'affiliate_cta_click', offer: 'fiore', pid: '8173' });
+        });
       });
-    });
-  });
 
-  /* 3. Floating Mobile Bottom CTA Handler */
-  const floatingBar = document.getElementById('floating-bar');
-  const floatingDismiss = document.getElementById('floating-dismiss');
-  let isDismissed = false;
+      const menuButton = document.querySelector('.menu-button');
+      const nav = document.querySelector('.nav');
+      menuButton.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+      });
+      nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }));
 
-  window.addEventListener('scroll', () => {
-    if (isDismissed) return;
-    if (window.scrollY > 400) {
-      floatingBar.classList.add('show');
-    } else {
-      floatingBar.classList.remove('show');
-    }
-  });
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-shown');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-shown'));
+      }
 
-  floatingDismiss.addEventListener('click', () => {
-    isDismissed = true;
-    floatingBar.classList.remove('show');
-  });
+      const sticky = document.querySelector('.sticky-cta');
+      const progress = document.querySelector('.progress');
+      let stickyClosed = false;
+      const updateScrollUI = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = `${scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0}%`;
+        if (!stickyClosed) sticky.classList.toggle('is-visible', window.scrollY > 720);
+      };
+      window.addEventListener('scroll', updateScrollUI, { passive: true });
+      updateScrollUI();
 
-});
-</script>
-
+      document.querySelector('.sticky-close').addEventListener('click', () => {
+        stickyClosed = true;
+        sticky.classList.remove('is-visible');
+      });
+    })();
+  </script>
 </body>
 </html>
