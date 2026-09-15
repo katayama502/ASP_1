@@ -161,6 +161,8 @@
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; color: var(--teal-2); font-size: 12px; font-weight: 800; letter-spacing: .1em; }
     .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--coral); }
     h1, h2, h3 { text-wrap: balance; }
+    .nw { white-space: nowrap; }
+    .br-pc { display: inline; }
     h1 { max-width: 680px; font-family: "Shippori Mincho", serif; font-size: clamp(36px, 4.6vw, 62px); line-height: 1.38; letter-spacing: .02em; }
     .hero-em { position: relative; color: var(--coral-dark); white-space: nowrap; }
     .hero-em::after { content: ""; position: absolute; left: 0; right: 0; bottom: 3px; height: 8px; z-index: -1; background: rgba(217, 164, 63, .32); border-radius: 99px; }
@@ -168,13 +170,13 @@
     .hero-lead strong { color: var(--ink); }
     .hero-lead sup { font-size: 9px; }
     .trust-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
-    .trust-chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; color: var(--teal-2); background: #fff; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 16px rgba(23, 49, 55, .05); }
+    .trust-chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; color: var(--teal-2); background: #fff; border-radius: 999px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 16px rgba(23, 49, 55, .05); }
     .trust-chip svg { width: 15px; height: 15px; color: var(--coral); flex: none; }
     .cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
     .button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; padding: 14px 26px; border-radius: 999px; font-size: 16px; font-weight: 800; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
     .button-primary { color: #fff; background: var(--coral); box-shadow: 0 12px 28px rgba(216, 95, 87, .27); }
     .button-primary:hover { transform: translateY(-2px); background: var(--coral-dark); box-shadow: 0 16px 32px rgba(185, 67, 63, .32); }
-    .button-secondary { color: var(--ink); background: #fff; border: 1px solid var(--line); }
+    .button-secondary { color: var(--ink); background: #fff; box-shadow: 0 4px 16px rgba(23, 49, 55, .06); }
     .button-secondary:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
     .button-primary svg, .button-secondary svg { width: 19px; height: 19px; flex: none; }
     .button-large { min-height: 66px; padding: 16px 34px; font-size: 17px; }
@@ -187,7 +189,7 @@
     .photo-frame { position: absolute; inset: 0 0 40px 25px; overflow: hidden; background: #E9E3DA; border-radius: 46% 46% 25px 25px; box-shadow: var(--shadow); }
     .photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 58% center; }
     .photo-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 58%, rgba(14, 35, 40, .35)); }
-    .stat-card { position: absolute; left: -10px; bottom: 0; width: 240px; padding: 20px; color: var(--ink); background: rgba(255, 255, 255, .96); border: 1px solid rgba(255, 255, 255, .75); border-radius: var(--radius-md); box-shadow: var(--shadow); }
+    .stat-card { position: absolute; left: -10px; bottom: 0; width: 240px; padding: 20px; color: var(--ink); background: rgba(255, 255, 255, .96); border-radius: var(--radius-md); box-shadow: var(--shadow); }
     .stat-label { display: block; color: var(--ink-soft); font-size: 11px; font-weight: 700; }
     .stat-number { display: block; margin-top: 2px; color: var(--coral-dark); font-family: "Shippori Mincho", serif; font-size: 36px; font-weight: 700; line-height: 1.25; }
     .stat-note { display: block; margin-top: 4px; color: #748488; font-size: 9px; line-height: 1.5; }
@@ -197,14 +199,14 @@
 
     /* Trust strip */
     .trust-strip { position: relative; z-index: 2; margin-top: -30px; }
-    .trust-strip-inner { display: grid; grid-template-columns: repeat(6, 1fr); overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .trust-strip-inner { display: grid; grid-template-columns: repeat(6, 1fr); overflow: hidden; background: var(--paper); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
     .trust-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 84px; padding: 12px 10px; text-align: center; }
     .trust-item + .trust-item { border-left: 1px solid var(--line); }
     .trust-item strong { color: var(--teal); font-family: "Shippori Mincho", serif; font-size: 18px; line-height: 1.2; }
     .trust-item span { color: var(--ink-soft); font-size: 11px; font-weight: 700; line-height: 1.4; }
 
     .quick-nav { margin-top: 22px; }
-    .quick-nav-inner { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; background: rgba(255,255,255,.7); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .quick-nav-inner { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; background: rgba(255,255,255,.7); border-radius: var(--radius-md); }
     .quick-nav a { position: relative; display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 62px; padding: 12px; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; }
     .quick-nav a + a { border-left: 1px solid var(--line); }
     .quick-nav a:hover { color: var(--coral-dark); background: #FFF9F4; }
@@ -226,7 +228,7 @@
     .fn sup, sup.ref { font-size: 9px; }
 
     /* Inline CTA block (used repeatedly) */
-    .cta-inline { margin-top: 40px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 26px 30px; background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--coral); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .cta-inline { margin-top: 40px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 26px 30px; background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
     .section-mint .cta-inline { background: rgba(255,255,255,.9); }
     .cta-inline strong { display: block; font-size: 17px; line-height: 1.5; }
     .cta-inline p { margin-top: 4px; color: var(--ink-soft); font-size: 13px; }
@@ -234,11 +236,11 @@
 
     /* Check section */
     .check-panel { margin-top: 42px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; }
-    .check-list { display: grid; gap: 12px; padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+    .check-list { display: grid; gap: 12px; padding: 30px; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
     .check-list h3 { font-size: 18px; }
-    .check-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; background: #FBF8F2; border: 1px solid transparent; border-radius: 14px; cursor: pointer; transition: border-color .2s ease, background .2s ease; }
-    .check-item:hover { border-color: var(--line); }
-    .check-item.is-checked { background: #FFF7F4; border-color: rgba(216,95,87,.35); }
+    .check-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; background: #FBF8F2; border-radius: 14px; cursor: pointer; transition: background .2s ease; }
+    .check-item:hover { background: #F5F0E8; }
+    .check-item.is-checked { background: #FFF1ED; }
     .check-item input { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--coral); flex: none; cursor: pointer; }
     .check-item span { font-size: 15px; font-weight: 700; line-height: 1.5; }
     .check-item small { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 12px; font-weight: 500; }
@@ -253,14 +255,14 @@
 
     /* Verdict */
     .verdict-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; margin-top: 42px; }
-    .verdict-main { position: relative; padding: 38px; overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+    .verdict-main { position: relative; padding: 38px; overflow: hidden; background: var(--paper); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
     .verdict-main::before { content: "結論"; position: absolute; right: -4px; top: -18px; color: rgba(216, 95, 87, .08); font-family: "Shippori Mincho", serif; font-size: 110px; font-weight: 700; line-height: 1; }
     .verdict-tag { display: inline-block; padding: 6px 10px; color: var(--coral-dark); background: #FCEBE8; border-radius: 999px; font-size: 11px; font-weight: 800; }
     .verdict-title { position: relative; margin-top: 16px; font-family: "Shippori Mincho", serif; font-size: 26px; line-height: 1.6; }
     .verdict-text { position: relative; margin-top: 14px; color: var(--ink-soft); }
     .verdict-text + .verdict-text { margin-top: 10px; }
     .fit-list { display: grid; gap: 14px; }
-    .fit-card { padding: 20px 22px; background: rgba(255, 255, 255, .8); border: 1px solid rgba(23, 49, 55, .1); border-radius: var(--radius-md); }
+    .fit-card { padding: 20px 22px; background: rgba(255, 255, 255, .85); border-radius: var(--radius-md); }
     .fit-card.no { background: #F6F3EE; }
     .fit-card-head { display: flex; align-items: center; gap: 10px; font-weight: 800; }
     .fit-card-head svg { width: 20px; height: 20px; color: var(--coral); flex: none; }
@@ -269,7 +271,7 @@
 
     /* Numbers */
     .num-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
-    .num-card { padding: 26px 22px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 7px 20px rgba(23, 49, 55, .06); }
+    .num-card { padding: 26px 22px; background: var(--paper); border-radius: var(--radius-md); box-shadow: 0 7px 20px rgba(23, 49, 55, .06); }
     .num-card .n { display: block; color: var(--coral-dark); font-family: "Shippori Mincho", serif; font-size: 40px; font-weight: 700; line-height: 1.15; }
     .num-card .n small { font-size: 18px; }
     .num-card h3 { margin-top: 8px; font-size: 15px; }
@@ -277,7 +279,7 @@
 
     /* Features */
     .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
-    .proof-card { display: grid; grid-template-columns: 52px 1fr; gap: 18px; padding: 28px 26px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 7px 20px rgba(23, 49, 55, .06); }
+    .proof-card { display: grid; grid-template-columns: 52px 1fr; gap: 18px; padding: 28px 26px; background: var(--paper); border-radius: var(--radius-md); box-shadow: 0 7px 20px rgba(23, 49, 55, .06); }
     .proof-icon { width: 52px; height: 52px; display: grid; place-items: center; color: var(--coral-dark); background: #FCEBE8; border-radius: 15px; }
     .proof-icon svg { width: 26px; height: 26px; }
     .proof-card h3 { font-size: 19px; line-height: 1.5; }
@@ -295,7 +297,7 @@
 
     /* Pricing */
     .price-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; margin-top: 42px; align-items: start; }
-    .price-card { padding: 34px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+    .price-card { padding: 34px; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
     .price-card h3 { display: flex; align-items: center; gap: 10px; font-size: 20px; }
     .price-card h3 span { padding: 4px 10px; color: #fff; background: var(--teal); border-radius: 999px; font-size: 11px; }
     .price-table { width: 100%; margin-top: 20px; border-collapse: collapse; }
@@ -306,16 +308,16 @@
     .price-table tr.total th, .price-table tr.total td { border-bottom: 0; padding-top: 18px; }
     .price-table tr.total th { color: var(--ink); }
     .price-side { display: grid; gap: 16px; }
-    .offer-card { padding: 26px; color: var(--ink); background: #FFF4D9; border: 1px solid rgba(217,164,63,.5); border-radius: var(--radius-md); }
+    .offer-card { padding: 26px; color: var(--ink); background: #FFF4D9; border-radius: var(--radius-md); }
     .offer-card .tag { display: inline-block; padding: 4px 10px; color: #fff; background: var(--coral); border-radius: 999px; font-size: 11px; font-weight: 800; }
     .offer-card strong { display: block; margin-top: 10px; font-family: "Shippori Mincho", serif; font-size: 22px; line-height: 1.4; }
     .offer-card strong em { font-style: normal; color: var(--coral-dark); font-size: 30px; }
     .offer-card p { margin-top: 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.7; }
-    .plan-card { padding: 22px 24px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .plan-card { padding: 22px 24px; background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
     .plan-card h4 { font-size: 15px; }
     .plan-card ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 13px; line-height: 1.75; }
 
-    .compare-wrap { margin-top: 30px; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .compare-wrap { margin-top: 30px; overflow-x: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
     .compare-table { width: 100%; min-width: 720px; border-collapse: collapse; background: #fff; }
     .compare-table th, .compare-table td { padding: 18px 20px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
     .compare-table thead th { color: #fff; background: var(--teal); font-size: 14px; }
@@ -333,7 +335,7 @@
     .step h3 { margin-top: 20px; font-size: 18px; }
     .step p { max-width: 310px; margin: 9px auto 0; color: #BDD0CD; font-size: 13px; }
     .step .time { display: inline-block; margin-top: 10px; padding: 4px 10px; color: var(--teal); background: #F4B7B2; border-radius: 999px; font-size: 11px; font-weight: 800; }
-    .ask-box { margin-top: 44px; padding: 30px 34px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius-md); }
+    .ask-box { margin-top: 44px; padding: 30px 34px; background: rgba(255,255,255,.07); border-radius: var(--radius-md); }
     .ask-box h3 { font-size: 18px; }
     .ask-box ol { margin: 14px 0 0; padding-left: 22px; color: #D9E5E3; font-size: 14px; line-height: 1.8; columns: 2; column-gap: 36px; }
     .ask-box li { break-inside: avoid; }
@@ -341,9 +343,7 @@
 
     /* Cautions */
     .caution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 42px; }
-    .caution-card { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); }
-    .caution-card.good { border-top: 5px solid var(--teal-2); }
-    .caution-card.check { border-top: 5px solid var(--gold); }
+    .caution-card { padding: 30px; background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
     .caution-card h3 { display: flex; align-items: center; gap: 10px; font-size: 20px; }
     .caution-card h3 svg { width: 23px; height: 23px; flex: none; }
     .caution-list { list-style: none; display: grid; gap: 14px; margin-top: 22px; padding: 0; }
@@ -352,7 +352,7 @@
     .check .caution-list li::before { background: #FFF4D9; border-color: var(--gold); }
 
     /* Final CTA */
-    .cta-panel { position: relative; overflow: hidden; padding: 58px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .cta-panel { position: relative; overflow: hidden; padding: 58px; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
     .cta-panel::after { content: ""; position: absolute; width: 340px; height: 340px; right: -130px; bottom: -190px; background: var(--mint); border-radius: 50%; }
     .cta-panel-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 50px; }
     .cta-panel h2 { font-family: "Shippori Mincho", serif; font-size: clamp(28px, 4vw, 44px); line-height: 1.5; }
@@ -364,7 +364,7 @@
 
     /* FAQ */
     .faq-list { max-width: 900px; display: grid; gap: 12px; margin: 42px auto 0; }
-    .faq-item { overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+    .faq-item { overflow: hidden; background: #fff; border-radius: var(--radius-sm); box-shadow: 0 4px 16px rgba(23, 49, 55, .05); }
     .faq-item summary { position: relative; list-style: none; padding: 22px 58px 22px 24px; cursor: pointer; font-weight: 800; }
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item summary::before { content: "Q"; display: inline-grid; width: 28px; height: 28px; place-items: center; margin-right: 12px; color: #fff; background: var(--teal); border-radius: 50%; font-family: "Shippori Mincho", serif; }
@@ -373,7 +373,7 @@
     .faq-answer { padding: 0 24px 22px 64px; color: var(--ink-soft); font-size: 14px; }
     .faq-answer a { color: var(--coral-dark); font-weight: 700; }
 
-    .sources { padding: 28px; background: rgba(255,255,255,.68); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .sources { padding: 28px; background: rgba(255,255,255,.68); border-radius: var(--radius-md); }
     .sources h2 { font-size: 16px; }
     .sources ol { margin-top: 14px; padding-left: 22px; }
     .sources li { color: var(--ink-soft); font-size: 11px; line-height: 1.7; }
@@ -384,7 +384,7 @@
     .footer-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; }
     .footer-brand { color: #fff; font-family: "Shippori Mincho", serif; font-size: 24px; font-weight: 700; }
     .footer-copy { margin-top: 12px; font-size: 12px; line-height: 1.8; }
-    .footer-disclosure { padding: 18px; color: #D9E5E3; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; font-size: 11px; line-height: 1.8; }
+    .footer-disclosure { padding: 18px; color: #D9E5E3; background: rgba(255,255,255,.06); border-radius: 12px; font-size: 11px; line-height: 1.8; }
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 34px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: 10px; }
 
     .sticky-cta { position: fixed; left: 50%; bottom: 16px; z-index: 90; width: min(680px, calc(100% - 28px)); display: flex; align-items: center; gap: 18px; padding: 10px 12px 10px 20px; color: #fff; background: rgba(16, 42, 47, .96); border: 1px solid rgba(255,255,255,.15); border-radius: 18px; box-shadow: 0 14px 45px rgba(16, 42, 47, .35); backdrop-filter: blur(12px); transform: translate(-50%, 140%); transition: transform .35s ease; }
@@ -401,7 +401,7 @@
     .progress { position: fixed; left: 0; top: 0; z-index: 200; width: 0; height: 3px; background: var(--coral); }
 
     @media (max-width: 980px) {
-      .nav { position: absolute; left: 20px; right: 20px; top: 76px; display: none; align-items: stretch; gap: 0; padding: 12px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+      .nav { position: absolute; left: 20px; right: 20px; top: 76px; display: none; align-items: stretch; gap: 0; padding: 12px; background: #fff; border-radius: 16px; box-shadow: var(--shadow); }
       .nav.is-open { display: grid; }
       .nav a { padding: 12px 14px; }
       .nav .nav-cta { margin-top: 6px; text-align: center; }
@@ -430,7 +430,9 @@
       .brand-mark { width: 34px; height: 34px; }
       .brand-name { font-size: 18px; }
       .hero { padding: 44px 0 76px; }
-      h1 { font-size: clamp(31px, 9.4vw, 44px); }
+      .br-pc { display: none; }
+      h1 { font-size: clamp(24px, 7.4vw, 40px); line-height: 1.42; }
+      .eyebrow { font-size: 11px; letter-spacing: .06em; }
       .hero-lead { font-size: 15px; }
       .cta-row { display: grid; grid-template-columns: 1fr; }
       .button-primary, .button-secondary { width: 100%; min-height: 58px; }
@@ -453,7 +455,12 @@
       .quick-nav a:nth-child(4) { border-top: 1px solid var(--line); }
       .section { padding: 74px 0; }
       .section-tight { padding: 56px 0; }
-      .section-heading { font-size: clamp(27px, 8vw, 36px); }
+      .section-heading { font-size: clamp(22px, 6.9vw, 34px); line-height: 1.5; }
+      .verdict-title { font-size: clamp(18px, 5.6vw, 24px); }
+      .check-result h3 { font-size: clamp(18px, 5.4vw, 22px); }
+      .cta-panel h2 { font-size: clamp(22px, 6.9vw, 34px); }
+      .offer-card strong { font-size: clamp(16px, 5vw, 20px); }
+      .offer-card strong em { font-size: clamp(22px, 7vw, 28px); }
       .verdict-grid, .caution-grid, .proof-grid { grid-template-columns: 1fr; }
       .verdict-main, .check-list, .check-result, .price-card { padding: 26px 22px; }
       .verdict-main::before { font-size: 80px; }
@@ -526,8 +533,8 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">2026.09.15 更新 · 20代・30代向け 結婚相談所ガイド</div>
-          <h1>「1年以内に結婚したい」なら、<br>まず無料相談で<span class="hero-em">現在地を知る。</span></h1>
+          <div class="eyebrow"><span class="nw">2026.09.15 更新</span>&nbsp;·&nbsp;<span class="nw">20代・30代向け</span>&nbsp;<span class="nw">結婚相談所ガイド</span></div>
+          <h1><span class="nw">「1年以内に結婚したい」</span><span class="nw">なら、</span><br class="br-pc"><span class="nw">まず無料相談で</span><span class="hero-em">現在地を知る。</span></h1>
           <p class="hero-lead">結婚相談所フィオーレは、<strong>成婚率52.0%<sup>※1</sup>・会員75,000名以上<sup>※2</sup>・申込無制限・成婚料0円</strong>。入会前に専任コーディネーターと「自分に合う婚活プラン」を無料で確認できます。来店でも、自宅からZoomでもOK。</p>
 
           <div class="trust-row" aria-label="無料相談のポイント">
@@ -538,7 +545,7 @@
 
           <div class="cta-row">
             <a class="button-primary button-large" data-cta="hero" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">
-              無料相談を予約する（無料・約1分）
+              無料相談を予約する
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
             </a>
             <a class="button-secondary" href="#check">
@@ -588,12 +595,12 @@
     <section class="section" id="check">
       <div class="container">
         <div class="section-kicker">30-Second Check</div>
-        <h2 class="section-heading">予約の前に。<br><span class="accent">入会資格</span>を30秒でチェック</h2>
+        <h2 class="section-heading"><span class="nw">予約の前に。</span><br class="br-pc"><span class="nw"><span class="accent">入会資格</span>を</span><span class="nw">30秒でチェック</span></h2>
         <p class="section-intro">フィオーレは入会時に独身証明書・年収証明などの提出と審査があります。条件を満たしていれば、無料相談で具体的なプランと費用まで一度に確認できます。当てはまる項目にチェックしてください。</p>
 
         <div class="check-panel reveal">
           <div class="check-list" id="check-list">
-            <h3>あなたに当てはまる項目は？</h3>
+            <h3 class="nw">あなたに当てはまる項目は？</h3>
             <label class="check-item"><input type="checkbox" name="q" value="1"><span>法律上の独身である<small>同棲を含む事実婚関係もない（公式の入会資格<sup>※2</sup>）</small></span></label>
             <label class="check-item"><input type="checkbox" name="q" value="2"><span>20歳以上である<small>男女ともに20歳以上が対象<sup>※2</sup></small></span></label>
             <label class="check-item"><input type="checkbox" name="q" value="3"><span>定職に就き、安定した収入がある<small>入会時に年収証明（前年度の源泉徴収票など）の提出が必要<sup>※2</sup></small></span></label>
@@ -604,7 +611,7 @@
           <div class="check-result" aria-live="polite">
             <span class="result-count" id="result-count">0 / 5 チェック</span>
             <div class="result-meter" aria-hidden="true"><div id="result-meter"></div></div>
-            <h3 id="result-title">チェックすると、無料相談を予約すべきか判定します</h3>
+            <h3 id="result-title"><span class="nw">チェックすると、</span><span class="nw">無料相談を</span><span class="nw">予約すべきか</span><span class="nw">判定します</span></h3>
             <p id="result-text">入会資格に該当しない申込は、相談当日に入会できず時間が無駄になることがあります。先に確認しておきましょう。</p>
             <a class="button-primary" id="result-cta" data-cta="check" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">
               無料相談を予約する（来店／Zoom）
@@ -620,13 +627,13 @@
     <section class="section section-mint" id="verdict">
       <div class="container">
         <div class="section-kicker">Editorial Verdict</div>
-        <h2 class="section-heading">結論：「出会いの数」と<span class="accent">「伴走してくれる人」</span>の両方が欲しい人に合う</h2>
+        <h2 class="section-heading"><span class="nw">結論：</span><span class="nw">「出会いの数」と</span><span class="nw"><span class="accent">「伴走してくれる人」</span>の</span><span class="nw">両方が欲しい人に合う</span></h2>
         <p class="section-intro">フィオーレの強みは、検索・AI・担当者推薦の3つの出会い方に加えて、全コースで専任コーディネーターが付き、活動データを3ヶ月ごとに振り返れること。アプリで「なぜうまくいかないか分からない」状態を抜け出したい人に向いています。</p>
 
         <div class="verdict-grid reveal">
           <article class="verdict-main">
             <span class="verdict-tag">編集部の見立て</span>
-            <h3 class="verdict-title">アプリで1年やって結果が出ていないなら、無料相談で「何が原因か」を聞くだけでも価値がある。</h3>
+            <h3 class="verdict-title"><span class="nw">アプリで1年やって</span><span class="nw">結果が出ていないなら、</span><span class="nw">無料相談で</span><span class="nw">「何が原因か」を</span><span class="nw">聞くだけでも</span><span class="nw">価値がある。</span></h3>
             <p class="verdict-text">相談所選びで最も重要なのは、担当者との相性・必要なサポート・総費用の納得感の3点。フィオーレの無料相談は公式に「入会を強く勧めることはありません」と明記<sup class="ref">※3</sup>されているので、この3点を確かめる面談として気軽に使えます。</p>
             <p class="verdict-text">また、相談当日に会員の顔写真付きプロフィールを見られる<sup class="ref">※3</sup>ため、「実際にどんな人がいるのか」を入会前に確認できるのも判断材料になります。</p>
           </article>
@@ -666,7 +673,7 @@
     <section class="section" id="numbers">
       <div class="container">
         <div class="section-kicker">Official Numbers</div>
-        <h2 class="section-heading">数字で見るフィオーレ<br><span class="accent" style="font-size:.6em">公式LP掲載・2026年7月時点</span></h2>
+        <h2 class="section-heading"><span class="nw">数字で見るフィオーレ</span><br><span class="nw accent" style="font-size:.6em">公式LP掲載・2026年7月時点</span></h2>
         <p class="section-intro">当サイトが独自に計測した数値ではなく、公式LPに掲載されている数値とその算出根拠をそのまま整理しています。</p>
 
         <div class="num-grid">
@@ -698,7 +705,7 @@
     <section class="section section-mint" id="features">
       <div class="container">
         <div class="section-kicker">Why Fiore</div>
-        <h2 class="section-heading">アプリと何が違う？<span class="accent">4つの仕組み</span></h2>
+        <h2 class="section-heading"><span class="nw">アプリと何が違う？</span><span class="nw accent">4つの仕組み</span></h2>
         <p class="section-intro">「機能があるか」ではなく「その機能で自分の婚活がどう変わるか」で整理しました。</p>
 
         <div class="proof-grid">
@@ -753,7 +760,7 @@
     <section class="section" id="price">
       <div class="container">
         <div class="section-kicker">Pricing</div>
-        <h2 class="section-heading">料金は隠さず先に。<span class="accent">1年で成婚した場合の総額</span>で見る</h2>
+        <h2 class="section-heading"><span class="nw">料金は隠さず先に。</span><br class="br-pc"><span class="nw accent">1年で成婚した場合の</span><span class="nw"><span class="accent">総額</span>で見る</span></h2>
         <p class="section-intro">結婚相談所は「初期費用が安い＝安い」ではありません。月会費と成婚料を含めた1年総額で比べるのが基本です。以下は公式LP掲載の「フィオーレコース」の料金（税込・2026年7月時点<sup>※2</sup>）。</p>
 
         <div class="price-grid">
@@ -817,7 +824,7 @@
     <section class="section section-dark" id="flow">
       <div class="container">
         <div class="section-kicker">3 Steps</div>
-        <h2 class="section-heading">無料相談の流れ。<br>予約から当日まで<span style="color:#F4B7B2">やることは3つ</span></h2>
+        <h2 class="section-heading"><span class="nw">無料相談の流れ。</span><br class="br-pc"><span class="nw">予約から当日まで</span><span class="nw" style="color:#F4B7B2">やることは3つ</span></h2>
         <p class="section-intro">予約フォームの入力項目は「相談方法（来店／オンライン）・希望店舗・希望日時・名前・都道府県・性別・年齢・電話番号・メール」のみ<sup class="ref">※3</sup>。クレジットカードや書類は不要です。</p>
 
         <div class="journey">
@@ -866,7 +873,7 @@
     <section class="section section-mint" id="cautions">
       <div class="container">
         <div class="section-kicker">Before You Book</div>
-        <h2 class="section-heading">予約前に知っておきたい、<span class="accent">良い点と注意点</span></h2>
+        <h2 class="section-heading"><span class="nw">予約前に知っておきたい、</span><span class="nw accent">良い点と注意点</span></h2>
 
         <div class="caution-grid">
           <article class="caution-card good reveal">
@@ -939,7 +946,7 @@
     <section class="section-tight" id="reserve">
       <div class="container">
         <!-- afb 公式バナー（素材は改変せずそのまま掲載） -->
-        <div class="banner-block reveal" style="margin-top:0;margin-bottom:28px">
+        <div class="banner-block banner-pc reveal" style="margin-top:0;margin-bottom:28px">
           <span class="pr">PR · 公式サイトへ移動します</span>
           <div class="banner-pc">
             <a href="https://t.afi-b.com/visit.php?a=J81738-z274930h&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1483264825-3.jpg" width="970" height="250" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/z274930h" width="1" height="1" style="border:none;" />
@@ -950,7 +957,7 @@
           <div class="cta-panel-grid">
             <div>
               <div class="section-kicker">Free Counseling</div>
-              <h2>迷っている時間が、<br>いちばんもったいない。</h2>
+              <h2><span class="nw">迷っている時間が、</span><br class="br-pc"><span class="nw">いちばんもったいない。</span></h2>
               <p>結婚相談所が自分に必要かどうかは、無料相談で「会員のプロフィール・プラン・総額」を見てから決めれば十分です。相談前に次の3つをメモしておくと、短い時間でも判断材料がそろいます。</p>
               <ul>
                 <li>希望する結婚時期（例：来年の秋まで）</li>
@@ -963,7 +970,7 @@
                 無料相談を予約する
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
               </a>
-              <small>来店／Zoomオンライン · 予約フォーム約1分 · 入会を強く勧めない（公式表記）<br>外部サイト（フィオーレ公式）へ移動します。IEは非対応です。</small>
+              <small><span class="nw">来店／Zoom</span> · <span class="nw">予約フォーム約1分</span> · <span class="nw">入会を強く勧めない（公式表記）</span><br><span class="nw">外部サイト（フィオーレ公式）へ移動します</span><span class="nw">（IE非対応）</span></small>
             </div>
           </div>
         </div>
@@ -1030,6 +1037,10 @@
       const title = document.getElementById('result-title');
       const text = document.getElementById('result-text');
       const cta = document.getElementById('result-cta');
+      const setPhrases = (el, phrases) => {
+        el.textContent = '';
+        phrases.forEach((p) => { const span = document.createElement('span'); span.className = 'nw'; span.textContent = p; el.appendChild(span); });
+      };
       const updateCheck = () => {
         const checked = boxes.filter((b) => b.checked);
         const n = checked.length;
@@ -1038,16 +1049,16 @@
         count.textContent = `${n} / ${boxes.length} チェック`;
         meter.style.width = `${(n / boxes.length) * 100}%`;
         if (n === 0) {
-          title.textContent = 'チェックすると、無料相談を予約すべきか判定します';
+          setPhrases(title, ['チェックすると、', '無料相談を', '予約すべきか', '判定します']);
           text.textContent = '入会資格に該当しない申込は、相談当日に入会できず時間が無駄になることがあります。先に確認しておきましょう。';
         } else if (hasMust && n === boxes.length) {
-          title.textContent = '入会資格の目安をすべて満たしています。無料相談で具体的なプランと総額を確認しましょう';
+          setPhrases(title, ['入会資格の目安を', 'すべて満たしています。', '無料相談で', '具体的なプランと', '総額を確認しましょう']);
           text.textContent = '相談当日は、会員のプロフィール・自分に合うプラン・費用の詳細を確認できます。予約フォームは約1分。来店かZoomかを選べます。';
         } else if (hasMust) {
-          title.textContent = '入会資格の必須条件は満たしています。迷いがあるなら、無料相談で「向いているか」を聞くのが早い';
+          setPhrases(title, ['入会資格の必須条件は', '満たしています。', '迷いがあるなら、', '無料相談で', '「向いているか」を', '聞くのが早い']);
           text.textContent = '結婚時期が未定でも相談自体は可能です。公式に「入会を強く勧めない」と明記されているので、情報収集として使えます。';
         } else {
-          title.textContent = '独身・20歳以上・定職の3つは入会の必須条件です';
+          setPhrases(title, ['独身・20歳以上・定職の', '3つは入会の', '必須条件です']);
           text.textContent = '該当しない項目がある場合、入会審査に通らない可能性が高く、申込は成立しません。条件が整ってから検討してください。';
         }
         cta.style.display = (n > 0 && !hasMust) ? 'none' : '';
