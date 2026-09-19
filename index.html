@@ -32,7 +32,7 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="婚活ナビ">
   <meta property="article:published_time" content="2026-08-12T00:00:00+09:00">
-  <meta property="article:modified_time" content="2026-09-15T00:00:00+09:00">
+  <meta property="article:modified_time" content="2026-09-19T00:00:00+09:00">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="フィオーレの無料相談は予約すべき？｜婚活ナビ">
   <meta name="twitter:description" content="成婚率52.0%・会員75,000名以上・成婚料0円。入会資格チェックと料金、注意点まで整理。">
@@ -63,7 +63,7 @@
         "description": "結婚相談所フィオーレの公式データ、料金、入会資格、無料相談の流れ、注意点を整理したガイド。",
         "image": "https://konkatsu-navia.com/assets/images/konkatsu-cafe-hero.jpg",
         "datePublished": "2026-08-12T00:00:00+09:00",
-        "dateModified": "2026-09-15T00:00:00+09:00",
+        "dateModified": "2026-09-19T00:00:00+09:00",
         "author": {"@type": "Organization", "name": "婚活ナビ編集部"},
         "publisher": {"@type": "Organization", "name": "婚活ナビ"},
         "mainEntityOfPage": "https://konkatsu-navia.com/",
@@ -182,6 +182,37 @@
     .button-large { min-height: 66px; padding: 16px 34px; font-size: 17px; }
     .microcopy { width: 100%; color: #66797D; font-size: 12px; line-height: 1.7; }
     .microcopy strong { color: var(--coral-dark); }
+    .next-step { margin-top: 10px; color: #66797D; font-size: 12px; line-height: 1.6; }
+    .next-step strong { color: var(--teal); }
+    .cta-inline .next-step { margin-top: 6px; }
+    .cta-panel-action .next-step { text-align: center; }
+    .check-result .next-step { color: #C7D8D5; }
+    .check-result .next-step strong { color: #fff; }
+    .section-dark .cta-inline .next-step { color: #66797D; }
+    .section-dark .cta-inline .next-step strong { color: var(--teal); }
+
+    /* 予約前メモ */
+    .prep-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+    .prep-card { padding: 20px 18px; background: rgba(255,255,255,.08); border-radius: var(--radius-md); }
+    .prep-card .prep-num { display: inline-grid; width: 28px; height: 28px; place-items: center; color: var(--teal); background: #F4B7B2; border-radius: 50%; font-family: "Shippori Mincho", serif; font-size: 14px; font-weight: 700; }
+    .prep-card h4 { margin-top: 10px; font-size: 15px; }
+    .prep-card p { margin-top: 6px; color: #BDD0CD; font-size: 12px; line-height: 1.7; }
+    .notice { margin-top: 18px; padding: 14px 18px; background: rgba(244,183,178,.14); border-radius: 12px; color: #F7DAD7; font-size: 13px; line-height: 1.7; }
+    .notice strong { color: #fff; }
+
+    /* 店舗から選ぶ */
+    .store-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .store-group { padding: 22px 22px 18px; background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+    .store-group h3 { color: var(--teal-2); font-size: 13px; font-weight: 800; letter-spacing: .08em; }
+    .store-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .store-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 42px; padding: 8px 14px; color: var(--ink); background: #FBF8F2; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s ease, color .2s ease; }
+    .store-chip:hover { color: #fff; background: var(--coral); }
+    .store-chip svg { width: 14px; height: 14px; flex: none; }
+    .store-online { margin-top: 18px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 20px; padding: 24px 28px; color: #fff; background: var(--teal); border-radius: var(--radius-md); }
+    .store-online strong { display: block; font-size: 17px; }
+    .store-online p { margin-top: 4px; color: #C7D8D5; font-size: 13px; }
+    .store-online .button-primary { min-height: 54px; white-space: nowrap; }
+    .store-hint { margin-top: 14px; color: #6E7F82; font-size: 12px; }
     .offer-note { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 10px 14px; color: var(--ink); background: #FFF4D9; border: 1px dashed var(--gold); border-radius: 12px; font-size: 13px; font-weight: 700; }
     .offer-note small { display: block; color: #6F7F82; font-size: 10px; font-weight: 500; line-height: 1.5; }
 
@@ -292,8 +323,6 @@
     .banner-block a { display: inline-block; max-width: 100%; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-soft); transition: transform .2s ease; }
     .banner-block a:hover { transform: translateY(-2px); }
     .banner-block img { display: block; width: auto; max-width: 100%; height: auto; }
-    .banner-pc { display: block; }
-    .banner-sp { display: none; }
 
     /* Pricing */
     .price-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; margin-top: 42px; align-items: start; }
@@ -418,6 +447,10 @@
       .cta-panel-action { min-width: 0; max-width: 420px; }
       .cta-inline { grid-template-columns: 1fr; }
       .cta-inline .button-primary { width: 100%; white-space: normal; }
+      .prep-grid { grid-template-columns: 1fr 1fr; }
+      .store-groups { grid-template-columns: 1fr; }
+      .store-online { grid-template-columns: 1fr; }
+      .store-online .button-primary { width: 100%; white-space: normal; }
       .ask-box ol { columns: 1; }
     }
 
@@ -470,8 +503,6 @@
       .num-card .n small { font-size: 14px; }
       .proof-card { grid-template-columns: 44px 1fr; gap: 14px; padding: 22px 18px; }
       .proof-icon { width: 44px; height: 44px; }
-      .banner-pc { display: none; }
-      .banner-sp { display: block; }
       .journey { grid-template-columns: 1fr; gap: 34px; }
       .journey::before { left: 37px; right: auto; top: 38px; bottom: 38px; width: 1px; height: auto; }
       .step { display: grid; grid-template-columns: 76px 1fr; column-gap: 18px; text-align: left; }
@@ -479,6 +510,7 @@
       .step h3 { margin-top: 8px; }
       .step p { margin: 4px 0 0; }
       .ask-box { padding: 22px 20px; }
+      .prep-grid { grid-template-columns: 1fr; gap: 10px; }
       .cta-inline { margin-top: 30px; padding: 22px 20px; }
       .cta-panel { padding: 34px 22px; }
       .faq-item summary { padding: 20px 50px 20px 18px; font-size: 14px; }
@@ -518,6 +550,7 @@
         <a href="#features">特徴</a>
         <a href="#price">料金</a>
         <a href="#flow">相談の流れ</a>
+        <a href="#stores">店舗</a>
         <a href="#faq">FAQ</a>
         <a class="nav-cta" data-cta="header" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">無料相談を予約</a>
       </nav>
@@ -533,7 +566,7 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="nw">2026.09.15 更新</span>&nbsp;·&nbsp;<span class="nw">20代・30代向け</span>&nbsp;<span class="nw">結婚相談所ガイド</span></div>
+          <div class="eyebrow"><span class="nw">2026.09.19 更新</span>&nbsp;·&nbsp;<span class="nw">20代・30代向け</span>&nbsp;<span class="nw">結婚相談所ガイド</span></div>
           <h1><span class="nw">「1年以内に結婚したい」</span><span class="nw">なら、</span><br class="br-pc"><span class="nw">まず無料相談で</span><span class="hero-em">現在地を知る。</span></h1>
           <p class="hero-lead">結婚相談所フィオーレは、<strong>成婚率52.0%<sup>※1</sup>・会員75,000名以上<sup>※2</sup>・申込無制限・成婚料0円</strong>。入会前に専任コーディネーターと「自分に合う婚活プラン」を無料で確認できます。来店でも、自宅からZoomでもOK。</p>
 
@@ -544,13 +577,13 @@
           </div>
 
           <div class="cta-row">
-            <a class="button-primary button-large" data-cta="hero" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">
-              無料相談を予約する
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
-            </a>
-            <a class="button-secondary" href="#check">
-              30秒で対象チェック
+            <a class="button-primary button-large" href="#check">
+              30秒で対象チェックして予約へ
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg>
+            </a>
+            <a class="button-secondary" data-cta="hero" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">
+              条件は満たしている：予約ページへ
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
             </a>
             <p class="microcopy"><strong>WEB申込限定：入会登録費33,000円 → 16,500円（50%OFF）</strong>と公式LPに記載（2026年9月15日確認）。適用条件・最新額は公式サイトと相談時にご確認ください。相談は無料、入会時には規定の費用がかかります。</p>
           </div>
@@ -617,6 +650,7 @@
               無料相談を予約する（来店／Zoom）
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
             </a>
+            <p class="next-step">リンク先（公式ページ）の<strong>「まずは無料で相談する」</strong>→ 予約フォーム（約1分）で完了します。</p>
             <p class="fn">※この判定は公式の入会資格をもとにした目安です。最終的な入会可否はフィオーレの審査によります。</p>
           </div>
         </div>
@@ -663,6 +697,7 @@
           <div>
             <strong>「向いている人」に2つ以上当てはまったら、無料相談で具体的なプランを聞いてみる</strong>
             <p>来店またはZoom。予約フォームは店舗・希望日時・名前・連絡先の入力のみ（約1分）。</p>
+            <p class="next-step">リンク先（公式ページ）の<strong>「まずは無料で相談する」</strong>→ 予約フォーム（約1分）で完了します。</p>
           </div>
           <a class="button-primary" data-cta="verdict" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">無料相談を予約する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
         </div>
@@ -746,12 +781,7 @@
         <!-- afb 公式バナー（素材は改変せずそのまま掲載） -->
         <div class="banner-block reveal">
           <span class="pr">PR · 公式サイトへ移動します</span>
-          <div class="banner-pc">
-            <a href="https://t.afi-b.com/visit.php?a=J81738-D274917j&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1476445225-3.jpg" width="728" height="90" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/D274917j" width="1" height="1" style="border:none;" />
-          </div>
-          <div class="banner-sp">
-            <a href="https://t.afi-b.com/visit.php?a=J81738-G274914r&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1475026225-3.jpg" width="320" height="100" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/G274914r" width="1" height="1" style="border:none;" />
-          </div>
+          <div class="banner-slot" data-pc="D274917j" data-sp="G274914r"></div>
         </div>
       </div>
     </section>
@@ -814,6 +844,7 @@
           <div>
             <strong>自分の場合の総額と割引の適用可否を、無料相談で書面で確認する</strong>
             <p>「初期費用の内訳」「WEB割引の適用条件」「休会・解約時の扱い」の3点を聞けば、比較検討に必要な情報はそろいます。</p>
+            <p class="next-step">リンク先（公式ページ）の<strong>「まずは無料で相談する」</strong>→ 予約フォーム（約1分）で完了します。</p>
           </div>
           <a class="button-primary" data-cta="price" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">料金を無料相談で確認<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
         </div>
@@ -849,6 +880,17 @@
         </div>
 
         <div class="ask-box reveal">
+          <h3>予約前に決めておく4つ（フォームで聞かれる項目）</h3>
+          <div class="prep-grid">
+            <div class="prep-card"><span class="prep-num">1</span><h4>来店 or Zoom</h4><p>近くに店舗がない・まず話だけ聞きたいならZoom。会員プロフィールを実際に見たいなら来店。</p></div>
+            <div class="prep-card"><span class="prep-num">2</span><h4>希望店舗</h4><p>16店舗から1つ。下の「店舗から選ぶ」で決めておくとフォームで迷いません。</p></div>
+            <div class="prep-card"><span class="prep-num">3</span><h4>候補日時を2つ</h4><p>10:00〜20:30の30分刻み。第1・第2希望を用意すると確認の連絡が1往復で済みます。</p></div>
+            <div class="prep-card"><span class="prep-num">4</span><h4>連絡先</h4><p>電話番号とメール。確認の連絡がこの2つに来るので、受け取れるものを。</p></div>
+          </div>
+          <div class="notice"><strong>予定が変わったら必ず一報を。</strong>無断キャンセルは相談の機会を失うだけでなく、次回の予約が取りにくくなります。当日の変更・予約は電話（050-1744-5777）で受け付けています<sup class="ref">※3</sup>。</div>
+        </div>
+
+        <div class="ask-box reveal">
           <h3>相談当日に聞くべき5つの質問（コピーしてメモ推奨）</h3>
           <ol>
             <li>自分の年齢・条件で、実際に紹介対象になる会員は何名くらいいるか</li>
@@ -863,9 +905,34 @@
           <div>
             <strong>希望日時が埋まる前に、予約だけ先に入れておく</strong>
             <p>予約は10:00〜20:30の30分刻み<sup class="ref">※3</sup>。土日は混みやすいので、候補日を2つ用意しておくとスムーズです。</p>
+            <p class="next-step">リンク先（公式ページ）の<strong>「まずは無料で相談する」</strong>→ 予約フォーム（約1分）で完了します。</p>
           </div>
           <a class="button-primary" data-cta="flow" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">無料相談の日時を選ぶ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== STORES ===== -->
+    <section class="section" id="stores">
+      <div class="container">
+        <div class="section-kicker">Choose Your Store</div>
+        <h2 class="section-heading"><span class="nw">店舗・相談方法から</span><span class="nw">選んで予約する</span></h2>
+        <p class="section-intro">予約フォームでは希望店舗を選ぶ必要があります。先に決めてから進むとスムーズです。全16店舗<sup class="ref">※3</sup>。店舗名を押すと公式の予約ページへ移動するので、フォームで同じ店舗を選択してください。</p>
+
+        <div class="store-groups reveal">
+          <div class="store-group"><h3>北海道・東北・関東</h3><div class="store-chips"><a class="store-chip" data-cta="store-sapporo" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>札幌店</a><a class="store-chip" data-cta="store-sendai" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>仙台店</a><a class="store-chip" data-cta="store-shinjuku" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>新宿店</a><a class="store-chip" data-cta="store-tokyo" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>東京店</a><a class="store-chip" data-cta="store-chiba" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>千葉店</a></div></div>
+          <div class="store-group"><h3>東海・関西</h3><div class="store-chips"><a class="store-chip" data-cta="store-nagoya" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>名古屋店</a><a class="store-chip" data-cta="store-umeda" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>梅田店</a><a class="store-chip" data-cta="store-shinsaibashi" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>心斎橋店</a><a class="store-chip" data-cta="store-kobe" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>神戸店</a><a class="store-chip" data-cta="store-kyoto-shijo" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>京都四条烏丸店</a><a class="store-chip" data-cta="store-kyoto-eki" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>JR京都駅前店</a><a class="store-chip" data-cta="store-shiga" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>滋賀店</a></div></div>
+          <div class="store-group"><h3>中国・四国・九州</h3><div class="store-chips"><a class="store-chip" data-cta="store-okayama" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>岡山店</a><a class="store-chip" data-cta="store-takamatsu" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>高松店</a><a class="store-chip" data-cta="store-fukuoka" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>福岡店</a><a class="store-chip" data-cta="store-oita" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>大分店</a></div></div>
+        </div>
+
+        <div class="store-online reveal">
+          <div>
+            <strong>近くに店舗がない／まず話だけ聞きたい → Zoomオンライン相談</strong>
+            <p>予約フォームの「ご希望の相談方法」で<b>オンライン相談</b>を選択<sup class="ref">※3</sup>。自宅から、移動なしで同じ内容を確認できます。</p>
+          </div>
+          <a class="button-primary" data-cta="store-online" href="https://t.afi-b.com/visit.php?a=J81738-J4238838&amp;p=i9894141" target="_blank" rel="nofollow sponsored noopener">Zoomで無料相談を予約<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+        </div>
+        <p class="store-hint">※どの店舗・相談方法を選んでも、リンク先は同じ公式予約ページです。「まずは無料で相談する」→ 予約フォームで店舗と相談方法を選択してください。</p>
       </div>
     </section>
 
@@ -945,24 +1012,17 @@
     <!-- ===== FINAL CTA ===== -->
     <section class="section-tight" id="reserve">
       <div class="container">
-        <!-- afb 公式バナー（素材は改変せずそのまま掲載） -->
-        <div class="banner-block banner-pc reveal" style="margin-top:0;margin-bottom:28px">
-          <span class="pr">PR · 公式サイトへ移動します</span>
-          <div class="banner-pc">
-            <a href="https://t.afi-b.com/visit.php?a=J81738-z274930h&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1483264825-3.jpg" width="970" height="250" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/z274930h" width="1" height="1" style="border:none;" />
-          </div>
-        </div>
-
         <div class="cta-panel reveal">
           <div class="cta-panel-grid">
             <div>
               <div class="section-kicker">Free Counseling</div>
               <h2><span class="nw">迷っている時間が、</span><br class="br-pc"><span class="nw">いちばんもったいない。</span></h2>
-              <p>結婚相談所が自分に必要かどうかは、無料相談で「会員のプロフィール・プラン・総額」を見てから決めれば十分です。相談前に次の3つをメモしておくと、短い時間でも判断材料がそろいます。</p>
+              <p>結婚相談所が自分に必要かどうかは、無料相談で「会員のプロフィール・プラン・総額」を見てから決めれば十分です。予約フォームは次の4つを決めておけば約1分で終わります。</p>
               <ul>
-                <li>希望する結婚時期（例：来年の秋まで）</li>
-                <li>毎月の活動予算の上限</li>
-                <li>担当者にサポートしてほしいこと</li>
+                <li>来店 or Zoomオンライン</li>
+                <li>希望店舗（<a href="#stores">16店舗から選ぶ</a>）</li>
+                <li>候補日時を2つ（10:00〜20:30・30分刻み）</li>
+                <li>連絡を受け取れる電話番号とメール</li>
               </ul>
             </div>
             <div class="cta-panel-action">
@@ -971,6 +1031,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
               </a>
               <small><span class="nw">来店／Zoom</span> · <span class="nw">予約フォーム約1分</span> · <span class="nw">入会を強く勧めない（公式表記）</span><br><span class="nw">外部サイト（フィオーレ公式）へ移動します</span><span class="nw">（IE非対応）</span></small>
+              <p class="next-step">リンク先（公式ページ）の<strong>「まずは無料で相談する」</strong>→ 予約フォーム（約1分）で完了します。</p>
             </div>
           </div>
         </div>
@@ -1004,7 +1065,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 婚活ナビ</span>
-        <span>最終更新：2026年9月15日</span>
+        <span>最終更新：2026年9月19日</span>
       </div>
     </div>
   </footer>
@@ -1021,6 +1082,25 @@
   <script>
     (() => {
       'use strict';
+
+      // afb バナー：ページに1枚だけ、表示する端末に合うものを挿入する（表示回数 = テキスト用ピクセル + バナー1枚 = 2 / PV）。
+      // 素材コードは afb 発行のものをそのまま使用（改変なし）。
+      const AFB_BANNERS = {
+        D274917j: '<a href="https://t.afi-b.com/visit.php?a=J81738-D274917j&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1476445225-3.jpg" width="728" height="90" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/D274917j" width="1" height="1" style="border:none;" />',
+        G274914r: '<a href="https://t.afi-b.com/visit.php?a=J81738-G274914r&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1475026225-3.jpg" width="320" height="100" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/G274914r" width="1" height="1" style="border:none;" />'
+        // z274930h (970x250) は計測ピクセル重複を避けるため未使用
+        // z274930h: '<a href="https://t.afi-b.com/visit.php?a=J81738-z274930h&p=i9894141" rel="nofollow"><img src="https://www.afi-b.com/upload_image/8173-1483264825-3.jpg" width="970" height="250" style="border:none;" alt="婚活" /></a><img src="https://t.afi-b.com/lead/J81738/i9894141/z274930h" width="1" height="1" style="border:none;" />'
+      };
+      const isMobile = window.matchMedia('(max-width: 720px)').matches;
+      document.querySelectorAll('.banner-slot').forEach((slot) => {
+        const key = isMobile ? slot.dataset.sp : slot.dataset.pc;
+        if (!key || !AFB_BANNERS[key]) { slot.closest('.banner-block').hidden = true; return; }
+        slot.innerHTML = AFB_BANNERS[key];
+        slot.querySelector('a').addEventListener('click', () => {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'affiliate_cta_click', offer: 'fiore', pid: '8173', position: `banner-${key}` });
+        });
+      });
 
       // CTAクリックの計測（位置別）。GTM/GA4を導入した場合は dataLayer から拾える。
       document.querySelectorAll('[data-cta]').forEach((link) => {
